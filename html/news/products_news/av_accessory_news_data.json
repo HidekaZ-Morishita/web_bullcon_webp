@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026年7月8日",
+    "type": "適合情報",
+    "product": ["FreeTVing"],
+    "car_models": [ {"model_name":"bZ4Xツーリング 　R8/2～　(XEAM12.17）", "specification":"【12.3インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車】"}],
+    "brand": ["トヨタ"],
+    "body": [
+      { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111AS』</a></span></b></p>", "align": "right"},
+      { "type":"html", "content": "<p><b>FreeTVing ｻｰﾋﾞｽﾎｰﾙｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111ASC』</a></span></b></p>", "align": "right"},
+      { "type":"html", "content": "<p><b>FreeTVing ｽﾃｱﾘﾝｸﾞｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111AST』</a></span></b></p>", "align": "right"},
+      { "type":"html", "content": "<p><b>DVD/CDプレーヤー<span style=\"color: blue;\"><a href=\"/html/products/AV_ACCESSORY/cdv/cdv01.htm\" target=\"_blank\">『AV-CDV01』</a></span></b></p>", "align": "right"}
+    ]
+  },
+  {
     "date": "2026年6月29日",
     "type": "適合情報",
     "product": ["FreeTVing"], "car_models": [
