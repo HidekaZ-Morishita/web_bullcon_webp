@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026年7月13日",
+    "type": "適合情報",
+    "product": ["FreeTVing"],
+    "car_models": [ 
+      {"model_name":"キックス　R8/6～　（P16 SNP16）", "specification":"【NissanConnectインフォテイメントシステム(12.3インチ Googleビルトイン）付車】"}
+    ],
+    "brand": ["ニッサン"],
+    "body": [
+      { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-206S』</a></span></b></p>", "align": "right"} 
+    ]
+  },
+  {
     "date": "2026年7月8日",
     "type": "適合情報",
     "product": ["FreeTVing"],
