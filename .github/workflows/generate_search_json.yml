@@ -1,0 +1,100 @@
+name: Generate Search Data JSON and Deploy
+
+on:
+  push:
+    branches:
+      - test   # 🟢 testブランチにプッシュされたらテスト環境のJSON更新
+      - main   # 🔴 mainブランチにプッシュされたら本番環境のJSON更新
+
+jobs:
+  # ==========================================
+  # ① テスト環境用 JSON生成＆デプロイ（testブランチ用）
+  # ==========================================
+  generate-and-deploy-staging:
+    if: github.ref == 'refs/heads/test'
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install beautifulsoup4 lxml
+
+      - name: Generate search_data.json
+        working-directory: html/search
+        run: |
+          python generate_meta_json.py
+
+      - name: Deploy search_data.json to Staging (Test)
+        run: |
+          sudo apt-get update && sudo apt-get install lftp -y
+          lftp -c "
+          open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ftp://${{ secrets.FTP_SERVER }}
+          set ftp:ssl-allow no
+          cd ${{ secrets.STAGING_SERVER_DIR }}
+          cd html/search
+          put html/search/search_data.json -o search_data.json
+          quit
+          "
+
+      - name: Purge Cloudflare Cache
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
+               -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+               -H "Content-Type:application/json" \
+               --data '{"purge_everything":true}'
+
+  # ==========================================
+  # ② 本番環境用 JSON生成＆デプロイ（mainブランチ用）
+  # ==========================================
+  generate-and-deploy-production:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install beautifulsoup4 lxml
+
+      - name: Generate search_data.json
+        working-directory: html/search
+        run: |
+          python generate_meta_json.py
+
+      - name: Deploy search_data.json to Production (Main)
+        run: |
+          sudo apt-get update && sudo apt-get install lftp -y
+          lftp -c "
+          open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ftp://${{ secrets.FTP_SERVER }}
+          set ftp:ssl-allow no
+          cd ${{ secrets.PROD_SERVER_DIR }}
+          cd html/search
+          put html/search/search_data.json -o search_data.json
+          quit
+          "
+
+      - name: Purge Cloudflare Cache
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
+               -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+               -H "Content-Type:application/json" \
+               --data '{"purge_everything":true}'
