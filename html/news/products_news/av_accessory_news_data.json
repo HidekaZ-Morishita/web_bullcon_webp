@@ -1,5 +1,32 @@
 [
   {
+    "date": "2026年7月22日",
+    "type": "適合情報",
+    "product": ["FreeTVing"],
+    "car_models": [ 
+        {"model_name":"プリウス　R8/7～　（MXWH60.65 ZVW60.65）","specification":"【12.3インチディスプレイオーディオPlus"}, 
+        {"model_name":"プリウス　R8/7～　（MXWH60.65 ZVW60.65）","specification":"【8インチディスプレイオーディオ"}, 
+        {"model_name":"プリウスPHEV　R8/7～　（MXWH61）","specification":"【12.3インチディスプレイオーディオPlus"}, 
+        {"model_name":"プリウスPHEV　R8/7～　（MXWH61）","specification":"【8インチディスプレイオーディオ"}],
+    "brand": ["トヨタ"],
+    "body": [
+      { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111AS』</a></span></b></p>", "align": "right"},
+      { "type":"html", "content": "<p><b>FreeTVing ｻｰﾋﾞｽﾎｰﾙｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111ASC』</a></span></b></p>", "align": "right"},
+      { "type":"html", "content": "<p><b>FreeTVing ｽﾃｱﾘﾝｸﾞｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111AST』</a></span></b></p>", "align": "right"}
+    ]
+  },
+  {
+    "date": "2026年7月22日",
+    "type": "適合情報",
+    "product": ["FreeTVing"], "car_models": [
+      {"model_name":"N-BOX　R8/8～　（JF5.6）","specification": "LXU-242NBi　（9インチ Honda CONNECTナビ（Gathers LXU-272NBi）"}],
+    "brand": ["ホンダ"],
+    "body": [
+      { "type":"html", "content": "<p><b>FreeTVing<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『FFT-236』</a></span></b></p>", "align": "right"},
+      { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『MS-236』</a></span></b></p>", "align": "right"}
+    ]
+  },
+  {
     "date": "2026年7月13日",
     "type": "適合情報",
     "product": ["FreeTVing"],
@@ -1861,7 +1888,8 @@
       { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『MS-238』</a></span></b></p>", "align": "right"},
       { "type": "html", "content": "【 本製品は外部入力機器映像を走行中に視聴するための製品です。 】", "align":"right"}
     ]
-  },{
+  },
+  {
     "date": "2024年1月15日",
     "type": "適合情報",
     "product": ["FreeTVing"], "car_models": [
