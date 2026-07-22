@@ -753,4 +753,31 @@ label {
     background-color: var(--color-disabled-button);
     cursor: not-allowed;
 }
+
+/* 適合品番の製品ページリンクスタイル */
+.product-part-link {
+    color: #0056b3;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.product-part-link:hover {
+    color: #003366;
+    text-decoration: none;
+}
+
+/* 品番の取説PDFリンクスタイル（製品ページが無く取説PDFがある場合：明るい緑） */
+.product-part-manual-link {
+    color: #28a745;
+    text-decoration: underline;
+    font-weight: bold;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.product-part-manual-link:hover {
+    color: #1e7e34;
+    text-decoration: none;
+}
+
 

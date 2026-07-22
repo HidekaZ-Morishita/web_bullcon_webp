@@ -1,4 +1,4 @@
-{
+﻿{
   "products_data": {
     "categories": [
       {
@@ -363,7 +363,8 @@
             "sub_pages": [
               { "name": "AV-V01", "url": "/html/products/MAGICONE/VTR_H/av-v01/av-v01.htm", "manual_url": "/pdf/products/MAGICONE/AV-V01.pdf" },
               { "name": "AV-V02", "url": "/html/products/MAGICONE/VTR_H/av-v02/av-v02.htm", "manual_url": "/pdf/products/MAGICONE/AV-V02.pdf" },
-              { "name": "AV-V05", "url": "/html/products/MAGICONE/VTR_H/av-v03/av-v03.htm", "manual_url": "/pdf/products/MAGICONE/AV-V05.pdf" },
+              { "name": "AV-V03", "url": "/html/products/MAGICONE/VTR_H/av-v03/av-v03.htm", "manual_url": "/pdf/products/MAGICONE/AV-V03.pdf" },
+              { "name": "AV-V05", "url": "/html/products/MAGICONE/VTR_H/av-v05/av-v05.htm", "manual_url": "/pdf/products/MAGICONE/AV-V05.pdf" },
               { "name": "AV-V05T", "url": "/html/products/MAGICONE/VTR_H/av-v05/av-v05.htm", "manual_url": "/pdf/products/MAGICONE/AV-V05T.pdf" },
               { "name": "AV-V05TM", "url": "/html/products/MAGICONE/VTR_H/av-v05/av-v05.htm", "manual_url": "/pdf/products/MAGICONE/AV-V05TM.pdf" },
               { "name": "AV-V07", "url": "/html/products/MAGICONE/VTR_H/av-v07/av-v07.htm", "manual_url": "/pdf/products/MAGICONE/AV-V07.pdf" },

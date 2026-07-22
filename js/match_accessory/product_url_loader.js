@@ -1,0 +1,116 @@
+let productUrlMapCache = null;
+let fetchPromise = null;
+
+function cleanString(str) {
+    if (!str) return '';
+    return String(str).replace(/^[\s\u3000]+|[\s\u3000]+$/g, '');
+}
+
+/**
+ * products_data.json を取得して品番 -> { url, mainPageUrl, manualUrl } のマッピング辞書（Map）を構築する
+ * @returns {Promise<Map<string, {url: string, mainPageUrl: string, manualUrl: string}>>}
+ */
+export async function loadProductUrlMap() {
+    if (productUrlMapCache) {
+        return productUrlMapCache;
+    }
+    if (fetchPromise) {
+        return fetchPromise;
+    }
+
+    fetchPromise = (async () => {
+        const map = new Map();
+        const candidatePaths = [
+            '../products/products_data.json',
+            '../../html/products/products_data.json',
+            './products_data.json'
+        ];
+
+        let response = null;
+        for (const path of candidatePaths) {
+            try {
+                const res = await fetch(path);
+                if (res.ok) {
+                    response = res;
+                    break;
+                }
+            } catch (e) {
+                // 次のパスを試行
+            }
+        }
+
+        if (!response) {
+            console.warn('products_data.json の取得に失敗しました。');
+            return map;
+        }
+
+        try {
+            const data = await response.json();
+            const categories = data?.products_data?.categories || [];
+
+            categories.forEach(category => {
+                const products = category.products || [];
+                products.forEach(product => {
+                    const mainPageUrl = (product.main_page?.url && typeof product.main_page.url === 'string') 
+                        ? cleanString(product.main_page.url) 
+                        : '';
+
+                    const subPages = product.sub_pages || [];
+                    subPages.forEach(sub => {
+                        if (sub.name) {
+                            const cleanName = cleanString(sub.name);
+                            const subUrl = (sub.url && typeof sub.url === 'string') ? cleanString(sub.url) : '';
+                            const manualUrl = (sub.manual_url && typeof sub.manual_url === 'string') ? cleanString(sub.manual_url) : '';
+                            
+                            if (cleanName && (subUrl || mainPageUrl || manualUrl)) {
+                                const infoObj = {
+                                    url: subUrl,
+                                    mainPageUrl: mainPageUrl,
+                                    manualUrl: manualUrl
+                                };
+                                map.set(cleanName, infoObj);
+                                map.set(cleanName.toUpperCase(), infoObj);
+                            }
+                        }
+                    });
+                });
+            });
+        } catch (error) {
+            console.error('products_data.json のパース中にエラーが発生しました:', error);
+        }
+
+        productUrlMapCache = map;
+        return map;
+    })();
+
+    return fetchPromise;
+}
+
+/**
+ * 品番テキストに対応するリンク情報 { url, mainPageUrl, manualUrl } を取得する
+ * 一致するものがあればオブジェクトを、なければ null を返す
+ * @param {string} rawName 
+ * @returns {{url: string, mainPageUrl: string, manualUrl: string}|null}
+ */
+export function getProductLinkInfo(rawName) {
+    if (!productUrlMapCache || !rawName) return null;
+    const name = cleanString(rawName);
+    if (!name || name === '-' || name === '←') return null;
+
+    if (productUrlMapCache.has(name)) {
+        return productUrlMapCache.get(name);
+    }
+    const upper = name.toUpperCase();
+    if (productUrlMapCache.has(upper)) {
+        return productUrlMapCache.get(upper);
+    }
+    return null;
+}
+
+/**
+ * 互換性のための従来関数
+ */
+export function getProductUrl(rawName) {
+    const info = getProductLinkInfo(rawName);
+    return info?.url || info?.mainPageUrl || null;
+}
