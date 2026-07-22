@@ -22,7 +22,19 @@ if ($cachedData !== false) {
     exit;
 }
 
-$config = require __DIR__ . '/../../../secret/hp_config.php';
+$configPath = null;
+$searchDir = __DIR__;
+for ($i = 0; $i < 5; $i++) {
+    if (file_exists($searchDir . '/secret/hp_config.php')) {
+        $configPath = $searchDir . '/secret/hp_config.php';
+        break;
+    }
+    $searchDir = dirname($searchDir);
+}
+if (!$configPath) {
+    $configPath = __DIR__ . '/../../../secret/hp_config.php';
+}
+$config = require $configPath;
 define('DB_HOST', $config['DB_HOST']);
 define('DB_NAME', $config['DB_NAME']);
 define('DB_USER', $config['DB_USER']);
