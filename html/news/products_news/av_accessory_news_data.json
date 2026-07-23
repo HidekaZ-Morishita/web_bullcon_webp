@@ -19,7 +19,7 @@
     "date": "2026年7月22日",
     "type": "適合情報",
     "product": ["FreeTVing"], "car_models": [
-      {"model_name":"N-BOX　R8/8～　（JF5.6）","specification": "LXU-242NBi　（9インチHonda CONNECTナビ（Gathers LXU-272NBi）"}],
+      {"model_name":"N-BOX　R8/8～　（JF5.6）","specification": "9インチHonda CONNECTナビ（Gathers LXU-272NBi"}],
     "brand": ["ホンダ"],
     "body": [
       { "type":"html", "content": "<p><b>FreeTVing<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『FFT-236』</a></span></b></p>", "align": "right"},
