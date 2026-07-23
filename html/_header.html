@@ -101,28 +101,49 @@
         </div>
     </div>
     
-    <!-- モバイルナビ -->
+    <!-- モバイルナビ（新プレミアム・ライトモダン仕様） -->
     <nav class="mobile-nav">
-        <div class="search-form-mobile-container">
-            <form class="search-form-mobile" action="/html/search/search.html" method="get">
-                <input type="search" name="q" placeholder="サイト内検索">
-                <button type="submit" class="search-button-mobile">
-                    <img src="/images/header/icon_search.svg" alt="検索">
-                </button>
-            </form>
+        <div class="mobile-nav-inner">
+            <div class="search-form-mobile-container">
+                <form class="search-form-mobile" action="/html/search/search.html" method="get">
+                    <input type="search" name="q" placeholder="サイト内検索">
+                    <button type="submit" class="search-button-mobile" aria-label="検索">
+                        <img src="/images/header/icon_search.svg" alt="検索">
+                    </button>
+                </form>
+            </div>
+
+            <div class="mobile-utility-badges">
+                <a href="/html/company/about.html" class="mobile-badge-about">会社概要</a>
+                <a href="/html/recruit/recruit.html" class="mobile-badge-recruit">採用情報</a>
+                <a href="/wp_shop/" target="_blank" class="mobile-badge-shop">WebShop <span class="ext-icon">↗</span></a>
+            </div>
+
+            <ul class="nav-list">
+                <li class="nav-item"><a href="/html/products/products.html"><span>製品情報</span><span class="nav-arrow">›</span></a></li>
+                <li class="nav-item"><a href="/html/match_accessory/match.html"><span>車種別 適合検索</span><span class="nav-arrow">›</span></a></li>
+                <li class="nav-item"><a href="/html/match_accessory/match_pdf.html"><span>適合表一覧 (PDF)</span><span class="nav-arrow">›</span></a></li>
+                <li class="nav-item"><a href="/html/news/products_news.html"><span>製品新着情報</span><span class="nav-arrow">›</span></a></li>
+                <li class="nav-item"><a href="/html/news/announcements.html"><span>お知らせ</span><span class="nav-arrow">›</span></a></li>
+                <li class="nav-item"><a href="/html/search/search.html?tab=manual-search"><span>取扱説明書</span><span class="nav-arrow">›</span></a></li>
+            </ul>
+
+            <div class="mobile-sns-footer">
+                <a href="https://www.youtube.com/@0bullcon0" target="_blank" class="sns-icon-link" aria-label="YouTube">
+                    <img src="/images/sns_icon/ico_youtube_c.svg" alt="YouTube">
+                </a>
+                <a href="https://x.com/bullcon_fuji" target="_blank" class="sns-icon-link" aria-label="X (Twitter)">
+                    <img src="/images/sns_icon/ico_x_c.svg" alt="X">
+                </a>
+                <a href="https://www.instagram.com/bullcon_fujidenki/" target="_blank" class="sns-icon-link" aria-label="Instagram">
+                    <img src="/images/sns_icon/ico_instagram_c.svg" alt="Instagram">
+                </a>
+            </div>
+
+            <div class="mobile-contact-container">
+                <a href="/html/contact/contact.html" class="mobile-contact-btn">お問い合わせ</a>
+            </div>
         </div>
-        <ul class="nav-list">
-            <li class="nav-item"><a href="/html/products/products.html">製品情報</a></li>
-            <li class="nav-item"><a href="/html/match_accessory/match.html">適合検索</a></li>
-            <li class="nav-item"><a href="/html/match_accessory/match_pdf.html">適合情報(pdf)</a></li>
-            <li class="nav-item"><a href="/html/news/products_news.html">製品新着情報</a></li>
-            <li class="nav-item"><a href="/html/search/search.html?tab=manual-search">取扱説明書</a></li>
-            <li class="nav-item"><a href="/html/news/announcements.html">お知らせ</a></li>
-            <li class="nav-item"><a href="/html/company/about.html">会社概要</a></li>
-            <li class="nav-item mobile-nav-recruit"><a href="/html/recruit/recruit.html">採用情報</a></li>
-            <li class="nav-item"><a href="/html/contact/contact.html">お問い合わせ</a></li>
-            <li class="nav-item"><a href="/wp_shop/" target="_blank">WebShop ↗</a></li>
-        </ul>
     </nav>
     <div class="mobile-nav-overlay"></div>
 </header>

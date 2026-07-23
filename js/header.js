@@ -128,14 +128,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 hamburgerMenu.classList.add('is-active');
                 mobileNav.classList.add('is-visible');
                 overlay.classList.add('is-visible');
+                document.body.classList.add('mobile-header-open');
                 document.body.style.overflow = 'hidden';
+
+                const sidebarControl = document.getElementById('sidebar-control-wrapper');
+                if (sidebarControl) {
+                    sidebarControl.style.setProperty('display', 'none', 'important');
+                }
+                const sidebarContainer = document.querySelector('.product-sidebar-container');
+                if (sidebarContainer) {
+                    sidebarContainer.style.setProperty('display', 'none', 'important');
+                }
             };
 
             const closeMenu = () => {
                 hamburgerMenu.classList.remove('is-active');
                 mobileNav.classList.remove('is-visible');
                 overlay.classList.remove('is-visible');
+                document.body.classList.remove('mobile-header-open');
                 document.body.style.overflow = '';
+
+                const sidebarControl = document.getElementById('sidebar-control-wrapper');
+                if (sidebarControl) {
+                    sidebarControl.style.removeProperty('display');
+                }
+                const sidebarContainer = document.querySelector('.product-sidebar-container');
+                if (sidebarContainer) {
+                    sidebarContainer.style.removeProperty('display');
+                }
             };
 
             hamburgerMenu.addEventListener('click', () => {

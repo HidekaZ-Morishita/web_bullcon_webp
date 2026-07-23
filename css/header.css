@@ -4,6 +4,7 @@
 :root {
   --header-padding-base: 24px;
   --header-logo-height-base: 56px;
+  --color-background: #ffffff;
   --color-mobile-overray: rgba(0, 0, 0, 0.5);
   --font-size-header: clamp(0.85rem, 0.35vw + 0.8rem, 1.02rem);
 }
@@ -12,7 +13,7 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   width: 100%;
   z-index: 1000;
-  background-color: var(--color-background);
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -42,7 +43,9 @@
   max-width: 100%;
   padding: 10px clamp(15px, 2.5vw, var(--header-padding-base));
   box-sizing: border-box;
-  background-color: var(--color-background);
+  background-color: #ffffff;
+  position: relative;
+  z-index: 1010;
 }
 
 /* 左端：ロゴ ＋ キャッチコピーグループ（全体がリンク） */
@@ -567,27 +570,28 @@
   .header-right-content {
     display: none;
   }
-}
 
-@media (max-width: 600px) {
   .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
+    background-color: #ffffff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
+    border-top: none;
   }
 
   .mobile-nav-overlay {
     position: fixed;
     width: 100%;
     height: 100%;
-    top: 60px;
+    top: 0;
+    left: 0;
     background-color: var(--color-mobile-overray);
-    z-index: 1000;
+    z-index: 990;
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s ease, visibility 0s 0.3s;
@@ -645,6 +649,9 @@
     align-items: center;
     justify-content: space-between;
     padding: 8px 10px;
+    position: relative;
+    z-index: 1010;
+    background-color: #ffffff;
   }
 
   .header-logo {
@@ -656,94 +663,200 @@
     width: auto;
   }
 
-  .search-form-mobile-container {
-    display: flex;
-    background-color: #fff;
+  /* モバイルドロワーナビ（新プレミアム・ライトモダン仕様） */
+  .mobile-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
     width: 100%;
-    justify-content: center;
-    padding: 10px 0 10px 50px;
+    background-color: #ffffff;
+    z-index: 10200;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-top: none;
+    max-height: 82vh;
+    overflow-y: auto;
+  }
+  
+  .mobile-nav.is-visible {
+    display: block;
+  }
+
+  /* ヘッダーのモバイルメニューが開いている時は、製品一覧ページのサイドバーボタンを自動的に隠す */
+  body.mobile-header-open #sidebar-control-wrapper,
+  body.mobile-header-open .product-sidebar-container,
+  body.mobile-header-open #sidebar-overlay,
+  body.mobile-header-open .sidebar-toggle-btn {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  .mobile-nav-inner {
+    padding: 16px 20px 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     box-sizing: border-box;
+  }
+
+  .search-form-mobile-container {
+    width: 100%;
+    padding: 0;
   }
 
   .search-form-mobile {
     display: flex;
     align-items: center;
-    gap: 5px;
+    background-color: #f1f5f9;
+    border-radius: 25px;
+    padding: 4px 6px 4px 16px;
+    border: 1px solid #cbd5e0;
   }
 
   .search-form-mobile input[type="search"] {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 5px 10px;
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 0.9rem;
+    color: #1e293b;
+    outline: none;
   }
 
   .search-button-mobile {
     background: none;
     border: none;
     cursor: pointer;
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
   }
 
   .search-button-mobile img {
-    height: 25px;
+    height: 18px;
     width: auto;
   }
-  
-  .header-nav {
-    display: none;
+
+  .mobile-utility-badges {
+    display: flex;
+    gap: 10px;
+    width: 100%;
   }
 
-  .mobile-nav {
-    position: relative;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: auto;
-    background-color: var(--color-accent);
-    z-index: 1020;
-    padding: 0;
-    overflow-y: auto;
-    max-height: 60vh;
+  .mobile-badge-about,
+  .mobile-badge-recruit,
+  .mobile-badge-shop {
+    flex: 1;
+    text-align: center;
+    padding: 8px 4px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
   }
-  
-  .mobile-nav.is-visible {
-    display: block;
+
+  .mobile-badge-about {
+    background-color: #f8fafc;
+    color: #475569;
+    border: 1px solid #cbd5e0;
   }
-  
+
+  .mobile-badge-recruit {
+    background-color: rgba(0, 153, 229, 0.1);
+    color: #0088cc;
+    border: 1px solid rgba(0, 153, 229, 0.2);
+  }
+
+  .mobile-badge-shop {
+    background-color: rgba(211, 84, 0, 0.1);
+    color: #d35400;
+    border: 1px solid rgba(211, 84, 0, 0.2);
+  }
+
   .mobile-nav .nav-list {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     width: 100%;
     gap: 0;
+    border-top: 1px solid #f1f5f9;
+    padding: 0;
+    margin: 0;
   }
-  
+
   .mobile-nav .nav-item {
     width: 100%;
+    text-align: left;
+    padding: 0;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .mobile-nav .nav-item a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 4px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1e293b;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .mobile-nav .nav-item a:hover {
+    color: #0099e5;
+  }
+
+  .nav-arrow {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    font-weight: 400;
+  }
+
+  .mobile-contact-container {
+    margin-top: 4px;
+    width: 100%;
+  }
+
+  .mobile-contact-btn {
+    display: block;
+    width: 100%;
     text-align: center;
-    padding: 16px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .mobile-nav .nav-item:first-child {
-    padding-top: 16px;
-  }
-  
-  .mobile-nav .nav-item:last-child {
-    border-bottom: none;
-    padding-bottom: 16px;
-  }
-  
-  .mobile-nav .nav-item a,
-  .mobile-nav .dropdown-toggle {
-    font-size: var(--font-size-h4);
-    color: #fff;
+    background: linear-gradient(135deg, #0099e5 0%, #00479d 100%);
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 12px 0;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 71, 157, 0.3);
+    box-sizing: border-box;
   }
 
-  .mobile-nav .mobile-nav-recruit {
-    background-color: rgba(230, 126, 34, 0.2);
+  .mobile-sns-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding-top: 8px;
   }
 
-  .mobile-nav .mobile-recruit-btn {
-    color: #ffb86c !important;
-    font-weight: bold;
+  .mobile-sns-footer img {
+    height: 22px;
+    width: auto;
   }
+}
+
+/* モバイルヘッダーメニューが開いている時は、製品一覧ページのサイドバーボタンを画面幅に関わらず確実に隠す */
+body.mobile-header-open #sidebar-control-wrapper,
+body.mobile-header-open .product-sidebar-container,
+body.mobile-header-open #sidebar-overlay,
+body.mobile-header-open .sidebar-toggle-btn,
+body:has(.mobile-nav.is-visible) #sidebar-control-wrapper,
+body:has(.mobile-nav.is-visible) .product-sidebar-container,
+body:has(.mobile-nav.is-visible) #sidebar-overlay,
+body:has(.mobile-nav.is-visible) .sidebar-toggle-btn {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }

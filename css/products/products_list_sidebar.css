@@ -272,3 +272,17 @@
         top: 15px;
     }
 }
+
+/* ヘッダーのモバイルメニューが開いている時は、製品一覧サイドバーの要素を非表示化 */
+body.mobile-header-open #sidebar-control-wrapper,
+body.mobile-header-open .product-sidebar-container,
+body.mobile-header-open #sidebar-overlay,
+body.mobile-header-open .sidebar-toggle-btn,
+body:has(.mobile-nav.is-visible) #sidebar-control-wrapper,
+body:has(.mobile-nav.is-visible) .product-sidebar-container,
+body:has(.mobile-nav.is-visible) #sidebar-overlay,
+body:has(.mobile-nav.is-visible) .sidebar-toggle-btn {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
