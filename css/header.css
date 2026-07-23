@@ -253,11 +253,11 @@
 
 .header-nav {
   display: flex;
-  justify-content: flex-start;
-  width: 100%;
+  flex: 1;
+  min-width: 0;
   max-width: 1150px;
-  margin-left: clamp(70px, 7vw, 120px);
-  margin-right: auto;
+  margin-left: clamp(35px, 4.5vw, 90px);
+  margin-right: clamp(20px, 2.5vw, 50px);
 }
 
 .nav-list {
@@ -557,6 +557,21 @@
 @media (max-width: 1150px) {
   .header-tagline {
     display: none;
+  }
+
+  .header-nav {
+    margin-left: clamp(15px, 2vw, 35px);
+    margin-right: clamp(12px, 1.8vw, 25px);
+  }
+
+  .nav-item a,
+  .dropdown-toggle {
+    font-size: clamp(0.78rem, 0.2vw + 0.74rem, 0.88rem);
+  }
+
+  .header-cta-btn {
+    padding: 6px 12px !important;
+    font-size: 0.82rem;
   }
 }
 
