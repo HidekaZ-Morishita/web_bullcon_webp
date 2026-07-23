@@ -50,7 +50,13 @@ img {
 }
 
 body {
-    padding-top: 130px; /* ヘッダー分下げる */
+    padding-top: 90px; /* ヘッダー分下げる */
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-top: 60px;
+    }
 }
 
 :target {

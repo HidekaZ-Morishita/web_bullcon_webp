@@ -1,68 +1,94 @@
 <header id="header" class="header">
     <div class="header-inner">
-        <div class="header-logo">
-            <a href="/">
-                <img src="/images/header/logo.png" alt="Bullcon | フジ電機工業株式会社" width="150">
-            </a>
+        <!-- 左端：Sky風ロゴ ＋ キャッチコピー（全体がホームへのリンク） -->
+        <a href="/" class="header-logo-group" title="Bullcon | フジ電機工業株式会社 ホームへ">
+            <div class="header-logo">
+                <img src="/images/header/logo.webp" alt="Bullcon | フジ電機工業株式会社">
+            </div>
+            <div class="header-tagline">
+                進化を続けるクルマへのアプローチ
+            </div>
+        </a>
+
+        <!-- 右側エリア（上段ユーティリティ/SNS/検索 ＋ 下段メインナビ/お問い合わせ） -->
+        <div class="header-right-content">
+            <!-- 上段：サブナビ ＋ SNSアイコン ＋ 検索 -->
+            <div class="header-top-bar">
+                <ul class="header-sub-nav">
+                    <li><a href="/html/company/about.html">会社概要</a></li>
+                    <li><a href="/html/recruit/recruit.html" class="sub-nav-recruit">採用情報</a></li>
+                    <li><a href="/wp_shop/" target="_blank" class="sub-nav-shop">WebShop <span class="ext-icon">↗</span></a></li>
+                </ul>
+                
+                <div class="header-sns-links">
+                    <a href="https://www.youtube.com/@0bullcon0" target="_blank" class="sns-icon-link" aria-label="YouTube">
+                        <img src="/images/sns_icon/ico_youtube_c.svg" alt="YouTube">
+                    </a>
+                    <a href="https://x.com/bullcon_fuji" target="_blank" class="sns-icon-link" aria-label="X (Twitter)">
+                        <img src="/images/sns_icon/ico_x_c.svg" alt="X">
+                    </a>
+                    <a href="https://www.instagram.com/bullcon_fujidenki/" target="_blank" class="sns-icon-link" aria-label="Instagram">
+                        <img src="/images/sns_icon/ico_instagram_c.svg" alt="Instagram">
+                    </a>
+                </div>
+
+                <div class="header-top-action">
+                    <form class="header-search-form" action="/html/search/search.html" method="get">
+                        <input type="search" name="q" placeholder="検索">
+                        <button type="submit" class="header-search-button" aria-label="検索">
+                            <img src="/images/header/icon_search.svg" alt="検索">
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- 下段：ロゴとお問い合わせの間のメインナビ（お知らせを一番右に配置） -->
+            <div class="header-main-bar">
+                <nav class="header-nav">
+                    <ul class="nav-list">
+                        <li class="nav-item has-dropdown" data-dropdown-target="product-dropdown">
+                            <span class="dropdown-toggle">
+                                製品情報
+                                <img src="/images/common/bottom_arrow_icon.webp" class="bottom_arrow_icon">
+                            </span>
+                        </li>
+                        <li class="nav-item has-dropdown" data-dropdown-target="match-dropdown">
+                            <span class="dropdown-toggle">
+                                適合情報
+                                <img src="/images/common/bottom_arrow_icon.webp" class="bottom_arrow_icon">
+                            </span>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/html/news/products_news.html">製品新着情報</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/html/news/announcements.html">お知らせ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/html/search/search.html?tab=manual-search">取扱説明書</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-contact">
+                    <a href="/html/contact/contact.html" class="header-cta-btn">お問い合わせ</a>
+                </div>
+            </div>
         </div>
-        
-        <nav class="header-nav">
-            <ul class="nav-list">
-                <li class="nav-item has-dropdown" data-dropdown-target="product-dropdown">
-                    <span class="dropdown-toggle">
-                        製品情報
-                        <img src="/images/common/bottom_arrow_icon.webp" class="bottom_arrow_icon">
-                    </span>
-                </li>
-                <li class="nav-item has-dropdown" data-dropdown-target="news-dropdown">
-                    <span class="dropdown-toggle">
-                        新着情報
-                        <img src="/images/common/bottom_arrow_icon.webp" class="bottom_arrow_icon">
-                    </span>
-                </li>
-                <li class="nav-item has-dropdown" data-dropdown-target="match-dropdown">
-                    <span class="dropdown-toggle">
-                        適合情報
-                        <img src="/images/common/bottom_arrow_icon.webp" class="bottom_arrow_icon">
-                    </span>
-                </li>
-                <li class="nav-item"><a href="/html/search/search.html?tab=manual-search">取扱説明書</a></li>
-                <li class="nav-item"><a href="/html/contact/contact.html">お問い合わせ</a></li>
-                <li class="nav-item"><a href="/wp_shop/" target="_blank">WebShop</a></li>
-            </ul>
-        </nav>
-        <div class="header-utility">
-            <form class="header-search-form" action="/html/search/search.html" method="get">
-                <input type="search" name="q" placeholder="サイト内検索">
-                <button type="submit" class="header-search-button">
-                    <img src="/images/header/icon_search.svg" alt="検索">
-                </button>
-            </form>
-            
-            <button class="hamburger-menu" aria-label="モバイルメニューを開く">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+
+        <button class="hamburger-menu" aria-label="モバイルメニューを開く">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
     
+    <!-- ドロップダウンメニュー -->
     <div id="product-dropdown" class="dropdown-menu">
         <div class="dropdown-list-container dropdown-border">
             <ul class="dropdown-list"></ul>
         </div>
         
         <div class="sub-dropdown-list-container"></div>
-    </div>
-    
-    <div id="news-dropdown" class="dropdown-menu">
-        <div class="dropdown-title"><img src="/images/header/icon_announcements.webp">新製品・適合車種の更新情報をご確認ください。</div>
-        <div class="dropdown-list-container">
-            <ul class="dropdown-list">
-                <li><a href="/html/news/announcements.html">弊社からのお知らせ</a></li>
-                <li><a href="/html/news/products_news.html">新製品・適合車種更新情報</a></li>
-            </ul>
-        </div>
     </div>
 
     <div id="match-dropdown" class="dropdown-menu">
@@ -75,6 +101,7 @@
         </div>
     </div>
     
+    <!-- モバイルナビ -->
     <nav class="mobile-nav">
         <div class="search-form-mobile-container">
             <form class="search-form-mobile" action="/html/search/search.html" method="get">
@@ -86,13 +113,15 @@
         </div>
         <ul class="nav-list">
             <li class="nav-item"><a href="/html/products/products.html">製品情報</a></li>
-            <li class="nav-item"><a href="/html/news/announcements.html">お知らせ</a></li>
-            <li class="nav-item"><a href="/html/news/products_news.html">製品新着情報</a></li>
             <li class="nav-item"><a href="/html/match_accessory/match.html">適合検索</a></li>
             <li class="nav-item"><a href="/html/match_accessory/match_pdf.html">適合情報(pdf)</a></li>
+            <li class="nav-item"><a href="/html/news/products_news.html">製品新着情報</a></li>
             <li class="nav-item"><a href="/html/search/search.html?tab=manual-search">取扱説明書</a></li>
+            <li class="nav-item"><a href="/html/news/announcements.html">お知らせ</a></li>
+            <li class="nav-item"><a href="/html/company/about.html">会社概要</a></li>
+            <li class="nav-item mobile-nav-recruit"><a href="/html/recruit/recruit.html">採用情報</a></li>
             <li class="nav-item"><a href="/html/contact/contact.html">お問い合わせ</a></li>
-            <li class="nav-item"><a href="/wp_shop/" target="_blank">WebShop</a></li>
+            <li class="nav-item"><a href="/wp_shop/" target="_blank">WebShop ↗</a></li>
         </ul>
     </nav>
     <div class="mobile-nav-overlay"></div>
