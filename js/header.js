@@ -1,13 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ヘッダーと製品データを同時に非同期で読み込む
+    const cacheBuster = '?v=' + Date.now();
     Promise.all([
-        fetch('/html/_header.html').then(response => {
+        fetch('/html/_header.html' + cacheBuster, { cache: 'no-cache' }).then(response => {
             if (!response.ok) {
                 throw new Error('Failed to load header: ' + response.statusText);
             }
             return response.text();
         }),
-        fetch('/html/products/products_data.json').then(response => {
+        fetch('/html/products/products_data.json' + cacheBuster, { cache: 'no-cache' }).then(response => {
             if (!response.ok) {
                 throw new Error('Failed to load products data: ' + response.statusText);
             }
