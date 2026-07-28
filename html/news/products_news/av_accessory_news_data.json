@@ -2,7 +2,7 @@
   {
     "date": "2026年7月28日",
     "type": "適合情報",
-    "product": ["FreeTVing"],
+    "product": ["FreeTVing / DVD/CDプレーヤー"],
     "car_models": [ 
         {"model_name":"ハイラックス　R8/5～　（GUN226）","specification":"【12.3インチディスプレイオーディオPlus"}],
     "brand": ["トヨタ"],
@@ -52,7 +52,7 @@
   {
     "date": "2026年7月8日",
     "type": "適合情報",
-    "product": ["FreeTVing"],
+    "product": ["FreeTVing / DVD/CDプレーヤー"],
     "car_models": [ {"model_name":"bZ4Xツーリング 　R8/2～　(XEAM12.17）", "specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車】"}],
     "brand": ["トヨタ"],
     "body": [
@@ -187,7 +187,7 @@
   {
     "date": "2026年6月4日",
     "type": "適合情報",
-    "product": ["FreeTVing"],
+    "product": ["FreeTVing / DVD/CDプレーヤー"],
     "car_models": [ {"model_name":"ランドクルーザーFJ 　R8/5～　(TRJ240W）", "specification":"【12.3インチディスプレイオーディオ（コネクティッドナビ対応）付車】"}],
     "brand": ["トヨタ"],
     "body": [
@@ -584,7 +584,7 @@
   {
     "date": "2025年12月5日",
     "type": "適合情報",
-    "product": ["FreeTVing"],
+    "product": ["FreeTVing / DVD/CDプレーヤー"],
     "car_models": [ {"model_name":"ランドクルーザー 300 　R7/4～　(FJA300W VJA300W）", "specification":"【8インチディスプレイオーディオ（コネクティッドナビ対応）付車】"}],
     "brand": ["トヨタ"],
     "body": [
@@ -597,7 +597,7 @@
   {
     "date": "2025年12月4日",
     "type": "適合情報",
-    "product": ["FreeTVing"],
+    "product": ["FreeTVing / DVD/CDプレーヤー"],
     "car_models": [ {"model_name":"bZ4X 　R7/10～　(XEAM11.15）", "specification":"【12.3インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車】"}],
     "brand": ["トヨタ"],
     "body": [
