@@ -1,11 +1,11 @@
-// event_handler.js
-
 import { renderForm, checkFieldsFilled } from './form_ui.js';
 import { PRODUCTS_DATA } from './data_mapper.js';
-import { handleSearchResults } from './result_renderer.js';
+import { handleSearchResults, handleReverseSearchResults } from './result_renderer.js';
 import { initializeAndGetMonitorNumber } from './match.js';
 
 let formState = {
+    searchMode: 'car',              // 'car' (車種から探す) または 'reverse' (製品品番から探す)
+    reversePartNumber: '',          // 逆引き検索用の入力品番
     selectedProduct: null,
     selectedOptionType: null,
     selectedInputType: null,        // 入力タイプ (select or text)
@@ -192,6 +192,16 @@ export function setupEventListeners() {
         const target = event.target;
         const suggestionsList = document.getElementById('product-code-suggestions');
         
+        // 0. NEW: 逆引き検索用のテキストフィールド
+        if (target.id === 'reverse-part-input') {
+            formState.reversePartNumber = target.value;
+            const reverseSearchBtn = document.getElementById('reverse-search-button');
+            if (reverseSearchBtn) {
+                reverseSearchBtn.disabled = target.value.trim().length < 3;
+            }
+            return;
+        }
+
         // 1. NEW: 直接入力モードのテキストフィールド
         if (target.id === 'direct-input-text') {
             formState.selectedDirectInputText = target.value.trim();
@@ -240,6 +250,33 @@ export function setupEventListeners() {
     formContainer.addEventListener('click', async (event) => {
         const target = event.target;
         const suggestionsList = document.getElementById('product-code-suggestions');
+
+        // モード切替タブのクリック処理
+        const modeTab = target.closest('.search-mode-tab');
+        if (modeTab) {
+            const newMode = modeTab.dataset.mode;
+            if (newMode && newMode !== formState.searchMode) {
+                formState.searchMode = newMode;
+                resetResultArea();
+                await renderForm('form-container', formState);
+            }
+            return;
+        }
+
+        // 逆引き検索ボタンのクリック処理
+        if (target && target.id === 'reverse-search-button' && !target.disabled) {
+            if (formState.reversePartNumber.trim().length >= 3) {
+                await handleReverseSearchResults(formState.reversePartNumber.trim());
+                const scrollTarget = document.getElementById('results-table-container');
+                if (scrollTarget) {
+                    scrollTarget.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+            return;
+        }
         
         // オートコンプリートの候補リストのクリックを処理
         if (suggestionsList && suggestionsList.contains(target) && target.tagName === 'LI') {
@@ -276,6 +313,7 @@ export function setupEventListeners() {
     });
 }
 
+
 /**
  * 検索結果表示エリアを初期状態にリセットする
  */
@@ -286,14 +324,26 @@ function resetResultArea() {
     const notesContainer = document.getElementById('notes-list-container');
     const pdfLinkContainer = document.getElementById('pdf-link-container');
 
+    const reverseWrapper = document.getElementById('reverse-results-wrapper');
+    if (reverseWrapper) {
+        reverseWrapper.remove();
+    }
+
+    const standardTable = document.querySelector('.result-table');
+    if (standardTable) {
+        standardTable.style.display = '';
+    }
+
     if (messageContainer) {
         messageContainer.textContent = '検索結果がここに表示されます。';
         messageContainer.style.display = 'block';
     }
     if (tableContainer) {
         tableContainer.style.display = 'none';
-        exportPdfButton.style.display = 'none';
-        exportPdfButton.disabled = true;
+        if (exportPdfButton) {
+            exportPdfButton.style.display = 'none';
+            exportPdfButton.disabled = true;
+        }
     }
     if (notesContainer) {
         notesContainer.style.display = 'none';
@@ -303,3 +353,4 @@ function resetResultArea() {
         pdfLinkContainer.style.display = 'none';
     }
 }
+
