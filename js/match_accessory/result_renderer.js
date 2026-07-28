@@ -291,11 +291,29 @@ export function createNotesCellHtml(item) {
 
 function generateTable(data, headerData, productName) {
     const selectedMaker = document.getElementById('maker-select')?.value;
-    const table = document.querySelector('.result-table');
-    if (!table) return;
+    const tableContainer = document.getElementById('results-table-container');
 
-    const thead = table.querySelector('thead');
-    const tbody = table.querySelector('tbody');
+    const reverseWrapper = document.getElementById('reverse-results-wrapper');
+    if (reverseWrapper) {
+        reverseWrapper.remove();
+    }
+
+    let table = document.querySelector('.result-table');
+    if (!table && tableContainer) {
+        tableContainer.innerHTML = '<table class="result-table"><thead></thead><tbody></tbody></table>';
+        table = document.querySelector('.result-table');
+    }
+    if (!table) return;
+    table.style.display = '';
+
+    let thead = table.querySelector('thead');
+    let tbody = table.querySelector('tbody');
+    if (!thead || !tbody) {
+        table.innerHTML = '<thead></thead><tbody></tbody>';
+        thead = table.querySelector('thead');
+        tbody = table.querySelector('tbody');
+    }
+
 
     thead.innerHTML = '';
     tbody.innerHTML = '';
@@ -428,3 +446,193 @@ async function displayNotes(data, productName) {
     notesContainer.innerHTML = notesHtml;
     notesContainer.style.display = noteItems.length > 0 ? 'block' : 'none';
 }
+
+const REVERSE_MATCH_API_URL = '../../api/web_page/get_reverse_compatibility.php';
+
+export async function handleReverseSearchResults(partNumber) {
+    const tableContainer = document.getElementById('results-table-container');
+    const exportPdfButton = document.getElementById('export-pdf-button');
+    const messageContainer = document.getElementById('message-container');
+    const notesContainer = document.getElementById('notes-list-container');
+
+    if (messageContainer) {
+        messageContainer.textContent = '製品品番の適合情報を検索中...';
+        messageContainer.style.display = 'block';
+    }
+
+    // 既存の標準テーブル非表示＆逆引き結果要素の完全クリア
+    const standardTable = document.querySelector('.result-table');
+    if (standardTable) {
+        standardTable.style.display = 'none';
+    }
+
+    const oldWrappers = document.querySelectorAll('#reverse-results-wrapper');
+    oldWrappers.forEach(el => el.remove());
+
+    if (exportPdfButton) {
+        exportPdfButton.style.display = 'none';
+        exportPdfButton.disabled = true;
+    }
+    if (notesContainer) {
+        notesContainer.style.display = 'none';
+        notesContainer.innerHTML = '';
+    }
+
+    try {
+        await loadProductUrlMap();
+        const response = await getCompatibilityData(REVERSE_MATCH_API_URL, { part_number: partNumber });
+
+        if (!response || !response.results || response.results.length === 0) {
+            if (messageContainer) {
+                messageContainer.textContent = `「${partNumber}」に該当する製品・適合車種は見つかりませんでした。`;
+                messageContainer.style.display = 'block';
+            }
+            return;
+        }
+
+        if (messageContainer) messageContainer.style.display = 'none';
+
+        // 念のため再度既存要素のクリアを実行
+        document.querySelectorAll('#reverse-results-wrapper').forEach(el => el.remove());
+
+        const wrapper = document.createElement('div');
+        wrapper.id = 'reverse-results-wrapper';
+        wrapper.className = 'reverse-result-container';
+
+        // 検索キーワードタイトルの表示
+        const titleBanner = document.createElement('div');
+        titleBanner.className = 'reverse-result-title-banner';
+        titleBanner.innerHTML = `「<span class="search-keyword">${response.query || partNumber}</span>」の適合検索結果（全 ${response.total_count || 0} 件）`;
+        wrapper.appendChild(titleBanner);
+
+        if (response.truncated) {
+            const warningBanner = document.createElement('div');
+            warningBanner.className = 'truncated-warning-banner';
+            warningBanner.textContent = `※ 該当件数が100件を超えたため、上位100件のみ表示しています。より詳しい型番（例: ${partNumber}-01）で検索してください。`;
+            wrapper.appendChild(warningBanner);
+        }
+
+        // フロントエンド側でのカテゴリ重複合算・完全一意化
+        const groupMap = new Map();
+        response.results.forEach(group => {
+            if (!groupMap.has(group.category)) {
+                groupMap.set(group.category, {
+                    category: group.category,
+                    has_car_model: group.has_car_model,
+                    items: []
+                });
+            }
+            const existingGroup = groupMap.get(group.category);
+            group.items.forEach(item => {
+                const uniqueKey = `${item.maker || ''}|${item.car_model || ''}|${item.model_number || ''}|${item.monitor_number || ''}`;
+                const matchedItem = existingGroup.items.find(existing => `${existing.maker || ''}|${existing.car_model || ''}|${existing.model_number || ''}|${existing.monitor_number || ''}` === uniqueKey);
+                
+                if (matchedItem) {
+                    // 同一車種の場合は適合品番を統合
+                    if (item.matched_part_number && matchedItem.matched_part_number !== item.matched_part_number) {
+                        const parts = (matchedItem.matched_part_number + ', ' + item.matched_part_number).split(',').map(s => s.trim()).filter(Boolean);
+                        matchedItem.matched_part_number = Array.from(new Set(parts)).join(', ');
+                    }
+                } else {
+                    existingGroup.items.push({ ...item });
+                }
+            });
+        });
+
+        groupMap.forEach(group => {
+            if (group.items.length === 0) return;
+
+            const groupDiv = document.createElement('div');
+            groupDiv.className = 'reverse-result-group';
+
+            const titleHeader = document.createElement('div');
+            titleHeader.className = 'reverse-result-category-title';
+            titleHeader.innerHTML = `
+                <span>${group.category}</span>
+                <span class="reverse-result-count-badge">適合 ${group.items.length} 件</span>
+            `;
+            groupDiv.appendChild(titleHeader);
+
+            const table = document.createElement('table');
+            table.className = 'compatibility-table';
+
+            let theadHtml = '';
+            if (group.has_car_model) {
+                theadHtml = `
+                    <thead>
+                        <tr>
+                            <th>メーカー</th>
+                            <th>車種</th>
+                            <th>型式</th>
+                            <th>年式</th>
+                            <th>適合品番</th>
+                        </tr>
+                    </thead>
+                `;
+            } else {
+                theadHtml = `
+                    <thead>
+                        <tr>
+                            <th>メーカー</th>
+                            <th>モニター型番</th>
+                            <th>モデル年</th>
+                            <th>適合品番</th>
+                        </tr>
+                    </thead>
+                `;
+            }
+            table.innerHTML = theadHtml;
+
+            const tbody = document.createElement('tbody');
+            group.items.forEach(item => {
+                const tr = document.createElement('tr');
+                const rawPartNo = item.matched_part_number || item.main_unit_part_number || item.part_number || item.switch_part_number || '-';
+                const partNoHtml = renderPartNumberWithLinks(rawPartNo);
+                
+                if (group.has_car_model) {
+                    let dateText = item.print_date || '';
+                    if (!dateText) {
+                        const startDate = item.start_date ? item.start_date.substring(0, 7) : '';
+                        const endDate = item.end_date ? item.end_date.substring(0, 7) : '現在';
+                        dateText = startDate ? `${startDate} ～ ${endDate}` : '全共通';
+                    }
+
+                    tr.innerHTML = `
+                        <td>${item.maker || '-'}</td>
+                        <td>${item.car_model || '-'}</td>
+                        <td>${item.model_number || '-'}</td>
+                        <td>${dateText}</td>
+                        <td>${partNoHtml}</td>
+                    `;
+                } else {
+                    tr.innerHTML = `
+                        <td>${item.maker || '-'}</td>
+                        <td>${item.monitor_number || '-'}</td>
+                        <td>${item.year ? item.year + '年' : '-'}</td>
+                        <td>${partNoHtml}</td>
+                    `;
+                }
+                tbody.appendChild(tr);
+            });
+
+
+            table.appendChild(tbody);
+            groupDiv.appendChild(table);
+            wrapper.appendChild(groupDiv);
+        });
+
+        if (tableContainer) {
+            tableContainer.appendChild(wrapper);
+            tableContainer.style.display = 'block';
+        }
+
+    } catch (error) {
+        console.error('逆引き検索エラー:', error);
+        if (messageContainer) {
+            messageContainer.textContent = '逆引き検索中にエラーが発生しました。';
+            messageContainer.style.display = 'block';
+        }
+    }
+}
+
+

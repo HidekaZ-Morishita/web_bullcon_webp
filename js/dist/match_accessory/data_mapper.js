@@ -3,7 +3,7 @@ export const PRODUCTS_DATA = { 'freeTVing': { name: 'フリーテレビング/�
 { label: '車両情報', subHeaders: [
 { key: 'car_model', label: '車名' }, { key: 'print_date', label: '年式' }, { key: 'model_number', label: '型式' }, { key: 'specification', label: '仕様' }, ]
 }, { label: 'フリーテレビング', subHeaders: [
-{ key: 'ft_auto_type', label: 'オートタイプ', priceKeys: { excl: 'ft_auto_price_excl_tax', incl: 'ft_auto_price_incl_tax' }, option: { nav: 'ft_auto_navigation_control', vehicle_pos: 'ft_auto_vehicle_position' } }, { key: 'ft_led_switch_type', label: 'LEDスイッチ切替タイプ', priceKeys: { excl: 'ft_led_price_excl_tax', incl: 'ft_led_price_incl_tax' }, option: { nav: 'ft_led_sh_st_navigation_control', vehicle_pos: 'ft_led_sh_st_vehicle_position', dvd: 'ft_led_sh_st_dvd_playback' } }, { key: 'ft_service_hole_switch_type', label: 'サービスホールスイッチ切替タイプ', priceKeys: { excl: 'ft_service_hole_price_excl_tax', incl: 'ft_service_hole_price_incl_tax' }, option: { nav: 'ft_led_sh_st_navigation_control', vehicle_pos: 'ft_led_sh_st_vehicle_position', dvd: 'ft_led_sh_st_dvd_playback' } }, { key: 'ft_steering_switch_type', label: 'ステアリングスイッチ切替タイプ', priceKeys: { excl: 'ft_steering_price_excl_tax', incl: 'ft_steering_price_incl_tax' }, option: { nav: 'ft_led_sh_st_navigation_control', vehicle_pos: 'ft_led_sh_st_vehicle_position', dvd: 'ft_led_sh_st_dvd_playback' } }, ]
+{ key: 'ft_auto_type', label: 'オートタイプ', priceKeys: { excl: 'ft_auto_price_excl_tax', incl: 'ft_auto_price_incl_tax' }, option: { nav: 'ft_auto_navigation_control', vehicle_pos: 'ft_auto_vehicle_position', dvd: 'ft_led_sh_st_dvd_playback' } }, { key: 'ft_led_switch_type', label: 'LEDスイッチ切替タイプ', priceKeys: { excl: 'ft_led_price_excl_tax', incl: 'ft_led_price_incl_tax' }, option: { nav: 'ft_led_sh_st_navigation_control', vehicle_pos: 'ft_led_sh_st_vehicle_position', dvd: 'ft_led_sh_st_dvd_playback' } }, { key: 'ft_service_hole_switch_type', label: 'サービスホールスイッチ切替タイプ', priceKeys: { excl: 'ft_service_hole_price_excl_tax', incl: 'ft_service_hole_price_incl_tax' }, option: { nav: 'ft_led_sh_st_navigation_control', vehicle_pos: 'ft_led_sh_st_vehicle_position', dvd: 'ft_led_sh_st_dvd_playback' } }, { key: 'ft_steering_switch_type', label: 'ステアリングスイッチ切替タイプ', priceKeys: { excl: 'ft_steering_price_excl_tax', incl: 'ft_steering_price_incl_tax' }, option: { nav: 'ft_led_sh_st_navigation_control', vehicle_pos: 'ft_led_sh_st_vehicle_position', dvd: 'ft_led_sh_st_dvd_playback' } }, ]
 }, { label: 'テレナビング', subHeaders: [
 { key: 'nav_product_number', label: 'LEDスイッチ切替タイプ', priceKeys: { excl: 'nav_price_excl_tax', incl: 'nav_price_incl_tax' }, option: { dvd: 'nav_dvd_playback_2' } }, { key: 'nav_product_number_2', label: 'nav_col_2', priceKeys: { excl: 'nav_price_excl_tax_2', incl: 'nav_price_incl_tax_2' }, option: { dvd: 'nav_dvd_playback_2' } }, ]
 }, { label: '注意事項', subHeaders: [
@@ -12,9 +12,9 @@ export const PRODUCTS_DATA = { 'freeTVing': { name: 'フリーテレビング/�
 }, 'dealer': { processType: 'dealer_process', pdf_paths: { 'トヨタ': '../../pdf/products/TVing/TVing_New_d_toyota.pdf', 'レクサス': '../../pdf/products/TVing/TVing_New_d_lexus.pdf', 'ニッサン': '../../pdf/products/TVing/TVing_New_d_nissan.pdf', 'ホンダ': '../../pdf/products/TVing/TVing_New_d_honda.pdf', 'マツダ': '../../pdf/products/TVing/TVing_New_d_mazda.pdf', 'スバル': '../../pdf/products/TVing/TVing_New_d_subaru.pdf', 'スズキ': '../../pdf/products/TVing/TVing_New_d_suzuki.pdf', 'ダイハツ': '../../pdf/products/TVing/TVing_New_d_daihatsu.pdf', 'ミツビシ': '../../pdf/products/TVing/TVing_New_d_mitsubishi.pdf', 'イスズ': ''
 }, header: [
 { label: 'モニター情報', subHeaders: [
-{ key: 'year', label: 'モデル年' }, { key: 'monitor_number', label: 'モニター型番' }, { key: 'specification', label: '特徴' }, ]
+{ key: 'year', label: 'モデル年' }, { key: 'monitor_number', label: 'モニター型番' }, { key: 'maker', label: 'メーカー' }, { key: 'specification', label: '特徴' }, ]
 }, { label: 'フリーテレビング', subHeaders: [
-{ key: 'ft_auto_type', label: 'オートタイプ', priceKeys: { excl: 'ft_auto_price_excl_tax', incl: 'ft_auto_price_incl_tax' }, option: { nav: 'ft_auto_navigation_control', vehicle_pos: 'ft_auto_vehicle_position' } }, { key: 'ft_led_switch_type', label: 'LEDスイッチ切替タイプ', priceKeys: { excl: 'ft_led_price_excl_tax', incl: 'ft_led_price_incl_tax' }, option: { nav: 'ft_led_sh_st_navigation_control', vehicle_pos: 'ft_led_sh_st_vehicle_position', dvd: 'ft_led_sh_st_dvd_playback' } }, { key: 'ft_service_hole_switch_type', label: 'サービスホールスイッチ切替タイプ', priceKeys: { excl: 'ft_service_hole_price_excl_tax', incl: 'ft_service_hole_price_incl_tax' }, option: { nav: 'ft_led_sh_st_navigation_control', vehicle_pos: 'ft_led_sh_st_vehicle_position', dvd: 'ft_led_sh_st_dvd_playback' } } ]
+{ key: 'ft_auto_type', label: 'オートタイプ', priceKeys: { excl: 'ft_auto_price_excl_tax', incl: 'ft_auto_price_incl_tax' }, option: { nav: 'ft_auto_navigation_control', vehicle_pos: 'ft_auto_vehicle_position', dvd: 'ft_led_sh_st_dvd_playback' } }, { key: 'ft_led_switch_type', label: 'LEDスイッチ切替タイプ', priceKeys: { excl: 'ft_led_price_excl_tax', incl: 'ft_led_price_incl_tax' }, option: { nav: 'ft_led_sh_st_navigation_control', vehicle_pos: 'ft_led_sh_st_vehicle_position', dvd: 'ft_led_sh_st_dvd_playback' } }, { key: 'ft_service_hole_switch_type', label: 'サービスホールスイッチ切替タイプ', priceKeys: { excl: 'ft_service_hole_price_excl_tax', incl: 'ft_service_hole_price_incl_tax' }, option: { nav: 'ft_led_sh_st_navigation_control', vehicle_pos: 'ft_led_sh_st_vehicle_position', dvd: 'ft_led_sh_st_dvd_playback' } } ]
 }, { label: 'テレナビング', subHeaders: [
 { key: 'nav_product_number', label: 'LEDスイッチ切替タイプ', priceKeys: { excl: 'nav_price_excl_tax', incl: 'nav_price_incl_tax' }, option: { dvd: 'nav_dvd_playback_2' } }, { key: 'nav_product_number_2', label: 'nav_col_2', priceKeys: { excl: 'nav_price_excl_tax_2', incl: 'nav_price_incl_tax_2' }, option: { dvd: 'nav_dvd_playback_2' } }, ]
 }, { label: '注意事項', subHeaders: [
@@ -32,7 +32,7 @@ export const PRODUCTS_DATA = { 'freeTVing': { name: 'フリーテレビング/�
 }, 'dealer': { processType: 'dealer_process', pdf_paths: { 'トヨタ': '../../pdf/products/MAGICONE/magicone_c_d_toyota.pdf', 'レクサス': '', 'ニッサン': '../../pdf/products/MAGICONE/magicone_c_d_nissan.pdf', 'ホンダ': '../../pdf/products/MAGICONE/magicone_c_d_honda.pdf', 'マツダ': '../../pdf/products/MAGICONE/magicone_c_d_mazda.pdf', 'スバル': '', 'スズキ': '../../pdf/products/MAGICONE/magicone_c_d_suzuki.pdf', 'ダイハツ': '../../pdf/products/MAGICONE/magicone_c_d_daihatsu.pdf', 'ミツビシ': '../../pdf/products/MAGICONE/magicone_c_d_mitsubishi.pdf', 'イスズ': ''
 }, header: [
 { label: '車両情報', subHeaders: [
-{ key: 'year', label: 'モデル年' }, { key: 'monitor_number', label: 'モニター型番' }, { key: 'specification', label: '仕様' }, ]
+{ key: 'year', label: 'モデル年' }, { key: 'monitor_number', label: 'モニター型番' }, { key: 'maker', label: 'メーカー' }, { key: 'specification', label: '仕様' }, ]
 }, { label: 'バックカメラ接続ユニット', subHeaders: [
 { key: 'product_number_1', label: '品番', priceKeys: { excl: 'un_price_excl_tax_1', incl: 'un_price_incl_tax_1' }, } ]
 }, { label: '注意事項', subHeaders: [
@@ -50,7 +50,7 @@ export const PRODUCTS_DATA = { 'freeTVing': { name: 'フリーテレビング/�
 }, 'dealer': { processType: 'dealer_process', pdf_paths: { 'トヨタ': '../../pdf/products/MAGICONE/magicone_c_d_toyota.pdf', 'レクサス': '', 'ニッサン': '../../pdf/products/MAGICONE/magicone_c_d_nissan.pdf', 'ホンダ': '../../pdf/products/MAGICONE/magicone_c_d_honda.pdf', 'マツダ': '../../pdf/products/MAGICONE/magicone_c_d_mazda.pdf', 'スバル': '', 'スズキ': '../../pdf/products/MAGICONE/magicone_c_d_suzuki.pdf', 'ダイハツ': '../../pdf/products/MAGICONE/magicone_c_d_daihatsu.pdf', 'ミツビシ': '../../pdf/products/MAGICONE/magicone_c_d_mitsubishi.pdf', 'イスズ': ''
 }, header: [
 { label: '車両情報', subHeaders: [
-{ key: 'year', label: 'モデル年' }, { key: 'monitor_number', label: 'モニター型番' }, { key: 'specification', label: '仕様' }, ]
+{ key: 'year', label: 'モデル年' }, { key: 'monitor_number', label: 'モニター型番' }, { key: 'maker', label: 'メーカー' }, { key: 'specification', label: '仕様' }, ]
 }, { label: 'バックカメラ接続ハーネス', subHeaders: [
 { key: 'product_number_1', label: '品番', priceKeys: { excl: 'ha_price_excl_tax_1', incl: 'ha_price_incl_tax_1' }, } ]
 }, { label: '注意事項', subHeaders: [
@@ -79,7 +79,7 @@ export const PRODUCTS_DATA = { 'freeTVing': { name: 'フリーテレビング/�
 }, 'dealer': { processType: 'dealer_process', pdf_paths: { 'トヨタ': '../../pdf/products/MAGICONE/magicone_r_d_toyota.pdf', 'レクサス': '', 'ニッサン': '../../pdf/products/MAGICONE/magicone_r_d_nissan.pdf', 'ホンダ': '../../pdf/products/MAGICONE/magicone_r_d_honda.pdf', 'マツダ': '', 'スバル': '', 'スズキ': '', 'ダイハツ': '../../pdf/products/MAGICONE/magicone_r_d_daihatsu.pdf', 'ミツビシ': '../../pdf/products/MAGICONE/magicone_r_d_mitsubishi.pdf', 'イスズ': ''
 }, header: [
 { label: '車両情報', subHeaders: [
-{ key: 'year', label: 'モデル年' }, { key: 'monitor_number', label: 'モニター型番' }, { key: 'specification', label: '仕様' }, ]
+{ key: 'year', label: 'モデル年' }, { key: 'monitor_number', label: 'モニター型番' }, { key: 'maker', label: 'メーカー' }, { key: 'specification', label: '仕様' }, ]
 }, { label: 'リアモニター出力ハーネス', subHeaders: [
 { key: 'product_number_1', label: '品番', priceKeys: { excl: 'price_excl_tax_1', incl: 'price_incl_tax_1' }, option: { excl_input: 'input', tv: 'tv', dvd: 'dvd' } } ]
 }, { label: '注意事項', subHeaders: [
@@ -99,7 +99,7 @@ export const PRODUCTS_DATA = { 'freeTVing': { name: 'フリーテレビング/�
 }, 'dealer': { processType: 'dealer_process', pdf_paths: { 'トヨタ': '../../pdf/products/MAGICONE/magicone_r_d_toyota.pdf', 'レクサス': '', 'ニッサン': '../../pdf/products/MAGICONE/magicone_r_d_nissan.pdf', 'ホンダ': '../../pdf/products/MAGICONE/magicone_r_d_honda.pdf', 'マツダ': '', 'スバル': '', 'スズキ': '', 'ダイハツ': '../../pdf/products/MAGICONE/magicone_r_d_daihatsu.pdf', 'ミツビシ': '../../pdf/products/MAGICONE/magicone_r_d_mitsubishi.pdf', 'イスズ': ''
 }, header: [
 { label: '車両情報', subHeaders: [
-{ key: 'year', label: 'モデル年' }, { key: 'monitor_number', label: 'モニター型番' }, { key: 'specification', label: '仕様' }, ]
+{ key: 'year', label: 'モデル年' }, { key: 'monitor_number', label: 'モニター型番' }, { key: 'maker', label: 'メーカー' }, { key: 'specification', label: '仕様' }, ]
 }, { label: 'RCA/HDMI 入力ハーネス', subHeaders: [
 { key: 'product_number_1', label: '品番', priceKeys: { excl: 'price_excl_tax_1', incl: 'price_incl_tax_1' } } ]
 }, { label: '注意事項', subHeaders: [
