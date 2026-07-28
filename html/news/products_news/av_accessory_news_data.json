@@ -18,8 +18,8 @@
     "type": "適合情報",
     "product": ["FreeTVing"], 
     "car_models": [
-      {"model_name":"フィット　R8/6～　（GS4.6）", "specification": "【Honda CONNECTディスプレー付車】"},
-      {"model_name":"フィット e:HEV　R8/6～　（GR3.4.6.8）", "specification": "【Honda CONNECTディスプレー付車】"}],
+      {"model_name":"フィット　R8/8～　（GS4.6）", "specification": "【Honda CONNECTディスプレー付車】"},
+      {"model_name":"フィット e:HEV　R8/8～　（GR3.4.6.8）", "specification": "【Honda CONNECTディスプレー付車】"}],
     "brand": ["ホンダ"],
     "body": [
       { "type":"html", "content": "<p><b>FreeTVing ｵｰﾄﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『FFT-234』</a></span></b></p>", "align": "right"},
