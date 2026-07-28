@@ -4,7 +4,7 @@
     "type": "適合情報",
     "product": ["FreeTVing / DVD/CDプレーヤー"],
     "car_models": [ 
-        {"model_name":"ハイラックス　R8/5～　（GUN226）","specification":"【12.3インチディスプレイオーディオPlus"}],
+        {"model_name":"ハイラックス　R8/5～　（GUN226）","specification":"【12.3インチディスプレイオーディオPlus】"}],
     "brand": ["トヨタ"],
     "body": [
       { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111AS』</a></span></b></p>", "align": "right"},
