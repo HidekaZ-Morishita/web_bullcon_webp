@@ -1,20 +1,31 @@
 [
   {
-    "date": "2026年7月22日",
+    "date": "2026年7月28日",
     "type": "適合情報",
     "product": ["FreeTVing"],
     "car_models": [ 
-        {"model_name":"プリウス　R8/7～　（MXWH60.65 ZVW60.65）","specification":"【12.3インチディスプレイオーディオPlus"}, 
-        {"model_name":"プリウス　R8/7～　（MXWH60.65 ZVW60.65）","specification":"【8インチディスプレイオーディオ"}, 
-        {"model_name":"プリウスPHEV　R8/7～　（MXWH61）","specification":"【12.3インチディスプレイオーディオPlus"}, 
-        {"model_name":"プリウスPHEV　R8/7～　（MXWH61）","specification":"【8インチディスプレイオーディオ"}],
+        {"model_name":"ハイラックス　R8/5～　（GUN226）","specification":"【12.3インチディスプレイオーディオPlus"}],
     "brand": ["トヨタ"],
     "body": [
       { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111AS』</a></span></b></p>", "align": "right"},
       { "type":"html", "content": "<p><b>FreeTVing ｻｰﾋﾞｽﾎｰﾙｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111ASC』</a></span></b></p>", "align": "right"},
-      { "type":"html", "content": "<p><b>FreeTVing ｽﾃｱﾘﾝｸﾞｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111AST』</a></span></b></p>", "align": "right"}
+      { "type":"html", "content": "<p><b>FreeTVing ｽﾃｱﾘﾝｸﾞｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111AST』</a></span></b></p>", "align": "right"},
+      { "type":"html", "content": "<p><b>DVD/CDプレーヤー<span style=\"color: blue;\"><a href=\"/html/products/AV_ACCESSORY/cdv/cdv01.htm\" target=\"_blank\">『AV-CDV01』</a></span></b></p>", "align": "right"}
     ]
   },
+  {
+    "date": "2026年7月28日",
+    "type": "適合情報",
+    "product": ["FreeTVing"], 
+    "car_models": [
+      {"model_name":"フィット　R8/6～　（GS4.6）", "specification": "【Honda CONNECTディスプレー付車】"},
+      {"model_name":"フィット e:HEV　R8/6～　（GR3.4.6.8）", "specification": "【Honda CONNECTディスプレー付車】"}],
+    "brand": ["ホンダ"],
+    "body": [
+      { "type":"html", "content": "<p><b>FreeTVing ｵｰﾄﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『FFT-234』</a></span></b></p>", "align": "right"},
+      { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『MS-234』</a></span></b></p>", "align": "right"}
+    ]
+  },  
   {
     "date": "2026年7月22日",
     "type": "適合情報",
