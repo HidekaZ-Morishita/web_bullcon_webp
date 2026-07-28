@@ -41,4 +41,4 @@ import { getCompatibilityData } from './match_api_client.js'; import { initializ
 <td>${item.monitor_number || '-'}</td>
 <td>${item.year ? item.year + '年' : '-'}</td>
 <td>${partNoHtml}</td>
-`; } tbody.appendChild(tr); }); table.appendChild(tbody); groupDiv.appendChild(table); wrapper.appendChild(groupDiv); }); if (tableContainer) { tableContainer.appendChild(wrapper); tableContainer.style.display = 'block'; } } catch (error) { console.error('逆引き検索エラー:', error); if (messageContainer) { messageContainer.textContent = '逆引き検索中にエラーが発生しました。'; messageContainer.style.display = 'block'; } } }
+`; } tbody.appendChild(tr); }); table.appendChild(tbody); const tableWrapper = document.createElement('div'); tableWrapper.className = 'reverse-table-wrapper'; tableWrapper.appendChild(table); groupDiv.appendChild(tableWrapper); wrapper.appendChild(groupDiv); }); if (tableContainer) { tableContainer.appendChild(wrapper); tableContainer.style.display = 'block'; } } catch (error) { console.error('逆引き検索エラー:', error); if (messageContainer) { messageContainer.textContent = '逆引き検索中にエラーが発生しました。'; messageContainer.style.display = 'block'; } } }

@@ -617,8 +617,14 @@ export async function handleReverseSearchResults(partNumber) {
 
 
             table.appendChild(tbody);
-            groupDiv.appendChild(table);
+            
+            const tableWrapper = document.createElement('div');
+            tableWrapper.className = 'reverse-table-wrapper';
+            tableWrapper.appendChild(table);
+            
+            groupDiv.appendChild(tableWrapper);
             wrapper.appendChild(groupDiv);
+
         });
 
         if (tableContainer) {
