@@ -827,6 +827,12 @@ label {
     margin-top: 4px;
 }
 
+.reverse-search-note .note-warning-red {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+
 .reverse-result-container {
     width: 100%;
     display: flex;

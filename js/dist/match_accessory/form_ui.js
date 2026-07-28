@@ -50,7 +50,10 @@ productInfo.name === 'DVD/CDプレイヤー'; if (isFixedOptionType) { currentOp
 `; formContainer.appendChild(tabsContainer); if (searchMode === 'reverse') { const reverseGroup = document.createElement('div'); reverseGroup.className = 'form-group'; const isMinLength = reversePartNumber.trim().length >= 3; reverseGroup.innerHTML = `
 <label for="reverse-part-input">製品品番</label>
 <input type="text" id="reverse-part-input" class="form-input" placeholder="製品品番を入力してください (例: ADM-102, SWC-N008)" value="${reversePartNumber}">
-<div class="reverse-search-note">※ 3文字以上で入力してください。製品カテゴリを跨いで横断検索します。</div>
+<div class="reverse-search-note">
+※ 3文字以上で入力してください。製品カテゴリを跨いで横断検索します。<br>
+<span class="note-warning-red">※ 一部の製品データは未登録のため、正しい品番であっても表示されない場合がございます。</span>
+</div>
 `; formContainer.appendChild(reverseGroup); const searchButton = document.createElement('button'); searchButton.id = 'reverse-search-button'; searchButton.className = 'btn-primary'; searchButton.textContent = '対応車種を逆引き検索'; searchButton.disabled = !isMinLength; formContainer.appendChild(searchButton); } else { const productGroup = document.createElement('div'); productGroup.className = 'form-group'; productGroup.innerHTML = `
 <label for="product-select">製品名</label>
 <select id="product-select" class="form-select"></select>

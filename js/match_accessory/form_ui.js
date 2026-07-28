@@ -232,8 +232,13 @@ export async function renderForm(containerId, state) {
         reverseGroup.innerHTML = `
             <label for="reverse-part-input">製品品番</label>
             <input type="text" id="reverse-part-input" class="form-input" placeholder="製品品番を入力してください (例: ADM-102, SWC-N008)" value="${reversePartNumber}">
-            <div class="reverse-search-note">※ 3文字以上で入力してください。製品カテゴリを跨いで横断検索します。</div>
+            <div class="reverse-search-note">
+                ※ 3文字以上で入力してください。製品カテゴリを跨いで横断検索します。<br>
+                <span class="note-warning-red">※ 一部の製品データは未登録のため、正しい品番であっても表示されない場合がございます。</span>
+            </div>
         `;
+
+
         formContainer.appendChild(reverseGroup);
 
         const searchButton = document.createElement('button');
