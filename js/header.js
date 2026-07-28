@@ -1,14 +1,22 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // ヘッダーと製品データを同時に非同期で読み込む
+function initHeader() {
+    // ヘッダーと製品データを同時に非同期で読み込む（強固なキャッシュ回避オプションを指定）
     const cacheBuster = '?v=' + Date.now();
+    const fetchOptions = {
+        cache: 'no-store',
+        headers: {
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+            'Pragma': 'no-cache'
+        }
+    };
+
     Promise.all([
-        fetch('/html/_header.html' + cacheBuster, { cache: 'no-cache' }).then(response => {
+        fetch('/html/_header.html' + cacheBuster, fetchOptions).then(response => {
             if (!response.ok) {
                 throw new Error('Failed to load header: ' + response.statusText);
             }
             return response.text();
         }),
-        fetch('/html/products/products_data.json' + cacheBuster, { cache: 'no-cache' }).then(response => {
+        fetch('/html/products/products_data.json' + cacheBuster, fetchOptions).then(response => {
             if (!response.ok) {
                 throw new Error('Failed to load products data: ' + response.statusText);
             }
@@ -432,4 +440,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-});
+}
+
+// DOMContentLoaded または既にDOMが読み込まれている場合は即時初期化
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHeader);
+} else {
+    initHeader();
+}
