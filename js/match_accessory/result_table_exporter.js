@@ -1,6 +1,17 @@
-// ライブラリのグローバル参照
-const html2canvas = window.html2canvas;
-const jsPDF = window.jspdf ? window.jspdf.jsPDF : null;
+// ライブラリの動的取得関数（Rocket Loader等による遅延読み込みに対応）
+function _getHtml2Canvas() {
+    return window.html2canvas || null;
+}
+
+function _getJsPdf() {
+    if (window.jspdf && window.jspdf.jsPDF) {
+        return window.jspdf.jsPDF;
+    }
+    if (window.jsPDF) {
+        return window.jsPDF;
+    }
+    return null;
+}
 
 // キャプチャの高さが確定するのを待つための遅延時間 (ミリ秒)
 const CAPTURE_DELAY_MS = 100;
@@ -42,34 +53,48 @@ const PDF_COMPRESSION_STYLE = `
  * @returns {Promise<{canvas: HTMLCanvasElement, cleanup: Function}>}
  */
 async function _captureTableToCanvas(tableContainerId) {
-    if (!html2canvas || !jsPDF) {
+    const html2canvasLib = _getHtml2Canvas();
+    const jsPdfLib = _getJsPdf();
+    if (!html2canvasLib || !jsPdfLib) {
         throw new Error('PDF出力ライブラリがロードされていません。ライブラリのロードを確認してください。');
     }
 
-    const originalTableContainer = document.getElementById(tableContainerId);
-    if (!originalTableContainer) {
-        throw new Error(`ターゲット要素 (#${tableContainerId}) が見つかりません。`);
+
+    const reverseWrapper = document.getElementById('reverse-results-wrapper');
+    const standardTableContainer = document.getElementById('results-table-container');
+    const standardTable = standardTableContainer ? standardTableContainer.querySelector('.result-table') : null;
+
+    let targetElementToCapture = null;
+    let isReverseMode = false;
+
+    if (reverseWrapper && reverseWrapper.children.length > 0) {
+        targetElementToCapture = reverseWrapper;
+        isReverseMode = true;
+    } else if (standardTableContainer && standardTable && standardTableContainer.style.display !== 'none') {
+        targetElementToCapture = standardTableContainer;
+    } else {
+        const fallbackContainer = document.getElementById(tableContainerId) || document.getElementById('result');
+        if (fallbackContainer) {
+            targetElementToCapture = fallbackContainer;
+        }
     }
 
-    const tableElement = originalTableContainer.querySelector('table');
-    if (!tableElement) {
-        throw new Error('内部の<table>要素が見つかりません。');
+    if (!targetElementToCapture) {
+        throw new Error('PDF出力対象の適合結果テーブルが見つかりません。');
     }
 
-    const originalNotesContainer = document.getElementById('notes-list-container');
-    const tableHeader = tableElement.querySelector('thead');
+    const tableHeaders = targetElementToCapture.querySelectorAll('thead');
 
     // スタイル変更前の状態を保存
     const originalBodyOverflowX = document.body.style.overflowX;
-    const originalHeaderPosition = tableHeader ? tableHeader.style.position : null;
 
     // bodyのoverflow-xを解除
     document.body.style.overflowX = 'visible';
 
     // 固定ヘッダーの解除
-    if (tableHeader) {
-        tableHeader.style.position = 'static';
-    }
+    tableHeaders.forEach(th => {
+        th.style.position = 'static';
+    });
 
     // 一時的な統合ラッパーを作成
     const tempWrapper = document.createElement('div');
@@ -79,13 +104,15 @@ async function _captureTableToCanvas(tableContainerId) {
     styleElement.textContent = PDF_COMPRESSION_STYLE;
     tempWrapper.appendChild(styleElement);
 
-    // テーブルをクローンして追加
-    tempWrapper.appendChild(tableElement.cloneNode(true));
+    // 表示中の対象コンテンツをクローンして追加
+    tempWrapper.appendChild(targetElementToCapture.cloneNode(true));
 
-    // 注意事項をクローンして追加
-    if (originalNotesContainer) {
+    // 標準モードかつ注意事項が表示されている場合、注意事項をクローンして追加
+    const originalNotesContainer = document.getElementById('notes-list-container');
+    if (!isReverseMode && originalNotesContainer && originalNotesContainer.style.display !== 'none') {
         tempWrapper.appendChild(originalNotesContainer.cloneNode(true));
     }
+
 
     // 画面外に配置
     Object.assign(tempWrapper.style, {
@@ -107,7 +134,7 @@ async function _captureTableToCanvas(tableContainerId) {
     const captureHeight = tempWrapper.scrollHeight;
     tempWrapper.style.width = `${captureWidth}px`;
 
-    const canvas = await html2canvas(tempWrapper, {
+    const canvas = await html2canvasLib(tempWrapper, {
         scale: 2,
         useCORS: true,
         allowTaint: true,
@@ -119,13 +146,11 @@ async function _captureTableToCanvas(tableContainerId) {
     // クリーンアップ関数（呼び出し元が責任を持って実行する）
     const cleanup = () => {
         document.body.style.overflowX = originalBodyOverflowX;
-        if (tableHeader && originalHeaderPosition !== null) {
-            tableHeader.style.position = originalHeaderPosition;
-        }
         if (tempWrapper.parentNode) {
             tempWrapper.parentNode.removeChild(tempWrapper);
         }
     };
+
 
     return { canvas, cleanup };
 }
@@ -137,7 +162,12 @@ async function _captureTableToCanvas(tableContainerId) {
  * @returns {object} jsPDF インスタンス
  */
 function _buildPdfFromCanvas(canvas, { orientation = 'landscape', format = 'a4' } = {}) {
-    const pdf = new jsPDF({ orientation, unit: 'mm', format });
+    const jsPdfLib = _getJsPdf();
+    if (!jsPdfLib) {
+        throw new Error('PDF出力ライブラリ(jsPDF)が見つかりません。');
+    }
+    const pdf = new jsPdfLib({ orientation, unit: 'mm', format });
+
 
     const pdfWidth = pdf.internal.pageSize.getWidth();
     const pdfHeight = pdf.internal.pageSize.getHeight();

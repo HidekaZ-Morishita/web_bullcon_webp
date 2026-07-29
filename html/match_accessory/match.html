@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bullcon製品の車種別適合をメーカー・車名から瞬時に検索できます。ご購入・取り付け前に最新の適合情報をオンラインで確認し、現車にて最終チェックをお願いします。">
+    <meta name="description"
+        content="Bullcon製品の車種別適合をメーカー・車名から瞬時に検索できます。ご購入・取り付け前に最新の適合情報をオンラインで確認し、現車にて最終チェックをお願いします。">
     <title>車種適合検索 | Bullcon - フジ電機工業株式会社</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/header.css">
@@ -14,12 +16,13 @@
 <!-- Google Analyticse計測用タグです。全てのページに埋め込んでください。 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-X0R1H3RK4W"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-X0R1H3RK4W');
+    gtag('config', 'G-X0R1H3RK4W');
 </script>
+
 <body>
     <div id="header-placeholder"></div>
     <main>
@@ -30,7 +33,8 @@
                     <span class="section-title-jp">車種適合検索</span>
                 </h2>
                 <div class="annotation">
-                    <p>当適合表は細心の注意を払って作成しておりますが、すべての車種・年式・グレードに対応しているわけではありません。また、車両の仕様変更や改良により、記載内容が最新の情報と異なる場合もございます。</p>
+                    <p>当適合表は細心の注意を払って作成しておりますが、すべての車種・年式・グレードに対応しているわけではありません。また、車両の仕様変更や改良により、記載内容が最新の情報と異なる場合もございます。
+                    </p>
                     <p>製品の取り付けやご購入の際は、必ず現車にて適合をご確認いただくか、お近くの販売店またはディーラー様にご相談ください。</p>
                     <p>本適合表の内容は、あくまで参考情報としてご利用ください。</p>
                     <p>※リストに存在しない製品については、お手数おかけしますが <a href="./match_pdf.html">製品適合表 (PDF)</a> にてPDFを直接ご確認ください。</p>
@@ -54,7 +58,8 @@
                                             <span class="pdf-dialog-label">用紙の向き</span>
                                             <div class="pdf-orientation-options">
                                                 <label class="pdf-radio-label">
-                                                    <input type="radio" name="pdf-orientation" value="landscape" checked>
+                                                    <input type="radio" name="pdf-orientation" value="landscape"
+                                                        checked>
                                                     <span class="pdf-radio-icon">&#128395;</span>
                                                     横向き（推奨）
                                                 </label>
@@ -76,7 +81,8 @@
                                         <div class="pdf-dialog-field">
                                             <label for="pdf-filename-input" class="pdf-dialog-label">ファイル名</label>
                                             <div class="pdf-filename-wrapper">
-                                                <input type="text" id="pdf-filename-input" class="pdf-dialog-input" value="compatibility_result" placeholder="ファイル名">
+                                                <input type="text" id="pdf-filename-input" class="pdf-dialog-input"
+                                                    value="compatibility_result" placeholder="ファイル名">
                                                 <span class="pdf-filename-ext">.pdf</span>
                                             </div>
                                         </div>
@@ -92,7 +98,8 @@
                                     <div class="pdf-preview-frame-wrapper" id="pdf-preview-frame-wrapper">
                                         <iframe id="pdf-preview-frame" title="PDFプレビュー"></iframe>
                                         <!-- ローディングオーバーレイ（JSで制御） -->
-                                        <div class="pdf-preview-loading" id="pdf-preview-loading" style="display: none;">
+                                        <div class="pdf-preview-loading" id="pdf-preview-loading"
+                                            style="display: none;">
                                             <div class="pdf-preview-spinner"></div>
                                             <span>プレビューを生成中...</span>
                                         </div>
@@ -108,18 +115,19 @@
                             </div>
                         </div>
                     </dialog>
-                    
+
                     <button id="show-saved-items-button">保存した適合情報を表示</button>
                     <dialog id="saved-items-dialog">
-                        <div class="dialog-header" style="display: flex; justify-content: space-between; align-items: center;">
+                        <div class="dialog-header"
+                            style="display: flex; justify-content: space-between; align-items: center;">
                             <h3>保存済み適合情報</h3>
                             <button id="close-saved-items-button" aria-label="閉じる">×</button>
                         </div>
                         <hr>
                         <div id="saved-items-list">
-                            </div>
+                        </div>
                     </dialog>
-                    
+
                     <div id="result" class="result-area">
                         <p id="message-container">検索結果がここに表示されます。</p>
                         <div id="results-table-container" style="display: none;">
@@ -140,8 +148,11 @@
     <script src="../../js/footer.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <script type="module" crossorigin src="../../js/match_accessory/match.js" data-cfasync="false"></script>
+    <script type="module" crossorigin src="../../js/match_accessory/match.js?v=20260729_v2"
+        data-cfasync="false"></script>
     <script type="module" crossorigin src="../../js/match_accessory/form_ui.js" data-cfasync="false"></script>
-    <script type="module" crossorigin src="../../js/match_accessory/saved_items_dialog.js" data-cfasync="false"></script>
+    <script type="module" crossorigin src="../../js/match_accessory/saved_items_dialog.js"
+        data-cfasync="false"></script>
 </body>
+
 </html>

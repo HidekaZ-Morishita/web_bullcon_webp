@@ -1,7 +1,8 @@
 // match.js
 import { renderForm } from './form_ui.js';
 import { setupEventListeners } from './event_handler.js';
-import { exportTableToPdf, generatePdfPreviewUrl } from './result_table_exporter.js';
+import { exportTableToPdf, generatePdfPreviewUrl } from './result_table_exporter.js?v=20260729_v2';
+
 import { getCompatibilityData } from './match_api_client.js';
 import { loadProductUrlMap } from './product_url_loader.js';
 
