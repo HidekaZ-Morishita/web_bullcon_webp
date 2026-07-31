@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026年7月31日",
+    "type": "新製品情報",
+    "product": ["FreeTVing"],
+    "car_models": [
+      {"plane_text":"【12.9インチ ディスプレイオーディオ装着車】"},
+      {"model_name":"RAV4ハイブリッド　R8/1～　（AXAN64）"},
+      {"model_name":"RAV4 PHEV　R8/3～　（AXAP64）"}],
+    "brand": ["トヨタ"],
+    "body": [
+      { "type": "html", "content": "<span style=\"color: red;\"\"font-size: 1.1rem;\">【2026年8月3日 販売開始】</spam>", "align": "center"},
+      { "type":"html", "content": "<p><b>FreeTVing ｽﾃｱﾘﾝｸﾞｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-112AST』</a></span></b></p>", "align": "right"}
+    ]
+  },
+  {
     "date": "2026年7月28日",
     "type": "適合情報",
     "product": ["FreeTVing / DVD/CDプレーヤー"],
