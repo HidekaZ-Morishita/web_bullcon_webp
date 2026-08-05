@@ -42,6 +42,29 @@ if ($request_host !== '' && in_array($request_host, $allowed_domains, true)) {
     }
 } else {
     // 許可されていない場合（OriginもRefererもない直叩きや、別ドメインからのアクセス）
+    
+    // 不正アクセスのログを記録
+    $log_dir = __DIR__ . '/logs';
+    if (!file_exists($log_dir)) {
+        @mkdir($log_dir, 0777, true);
+    }
+    $log_file = $log_dir . '/unauthorized_access.log';
+    
+    // ログファイルが2MBを超えた場合、.oldとしてバックアップ（1世代のみ保存）
+    if (file_exists($log_file) && filesize($log_file) > 2 * 1024 * 1024) {
+        @rename($log_file, $log_file . '.old');
+    }
+
+    $ip = $_SERVER['REMOTE_ADDR'] ?? 'UNKNOWN_IP';
+    $ua = $_SERVER['HTTP_USER_AGENT'] ?? 'UNKNOWN_UA';
+    $uri = $_SERVER['REQUEST_URI'] ?? 'UNKNOWN_URI';
+    $timestamp = date('Y-m-d H:i:s');
+    
+    $log_message = sprintf("[%s] IP: %s | URI: %s | Origin: %s | Referer: %s | UA: %s\n",
+        $timestamp, $ip, $uri, $request_origin, $request_referer, $ua);
+        
+    @file_put_contents($log_file, $log_message, FILE_APPEND | LOCK_EX);
+
     header('HTTP/1.1 403 Forbidden');
     header('Content-Type: application/json; charset=UTF-8');
     echo json_encode(['error' => 'Forbidden: Unauthorized Access']);
