@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026年8月5日",
+    "type": "適合情報",
+    "product": ["DVD/CDプレーヤー"],
+    "car_models": [
+        {"plane_text":""},
+        {"model_name":"プリウス　R8/6～　＜一部改良後＞　（MXWH60.65）","specification":"【12.3インチディスプレイオーディオ Plus/8インチ ディスプレイオーディオ付車】"}, 
+        {"model_name":"プリウスPHEV　R8/6～　＜一部改良後＞　（MXWH61）","specification":"【12.3インチディスプレイオーディオ Plus/8インチ ディスプレイオーディオ付車】"}],
+    "brand": ["トヨタ"],
+    "body": [
+      { "type":"html", "content": "<p><b>DVD/CDプレーヤー<span style=\"color: blue;\"><a href=\"/html/products/AV_ACCESSORY/cdv/cdv01.htm\" target=\"_blank\">『AV-CDV01』</a></span></b></p>", "align": "right"}
+    ]
+  },
+  {
     "date": "2026年7月31日",
     "type": "新製品情報",
     "product": ["FreeTVing"],
