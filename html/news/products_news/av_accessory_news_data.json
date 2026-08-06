@@ -4,7 +4,6 @@
     "type": "適合情報",
     "product": ["DVD/CDプレーヤー"],
     "car_models": [
-        {"plane_text":""},
         {"model_name":"プリウス　R8/6～　＜一部改良後＞　（MXWH60.65）","specification":"【12.3インチディスプレイオーディオ Plus/8インチ ディスプレイオーディオ付車】"}, 
         {"model_name":"プリウスPHEV　R8/6～　＜一部改良後＞　（MXWH61）","specification":"【12.3インチディスプレイオーディオ Plus/8インチ ディスプレイオーディオ付車】"}],
     "brand": ["トヨタ"],
