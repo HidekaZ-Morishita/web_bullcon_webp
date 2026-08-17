@@ -150,7 +150,7 @@ def main():
     # 製品データJSONを読み込み、URLとnameをマッピング
     product_keywords_map = {}
     try:
-        with open(os.path.join(target_directory, 'products/products_data.json'), 'r', encoding='utf-8') as f:
+        with open(os.path.join(target_directory, 'products/products_data.json'), 'r', encoding='utf-8-sig') as f:
             products_data = json.load(f)
             for category in products_data['products_data']['categories']:
                 for product in category['products']:
@@ -208,7 +208,7 @@ def main():
             if file.endswith(('.html', '.htm')):
                 file_path = os.path.join(root, file)
                 try:
-                    with open(file_path, 'r', encoding='utf-8') as f:
+                    with open(file_path, 'r', encoding='utf-8-sig') as f:
                         html_content = f.read()
                     
                     soup = BeautifulSoup(html_content, 'lxml')
