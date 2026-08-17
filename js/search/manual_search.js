@@ -39,13 +39,13 @@ export function initializeManualSearch() {
                                 itemName.includes(word) || subName.includes(word)
                             );
 
-                            if (isMatch && (sub_page.manual_url || item.url)) {
+                            if (isMatch) {
                                 tempResults.push({
                                     name: sub_page.name,
-                                    manual_url: sub_page.manual_url,
+                                    manual_url: sub_page.manual_url || '',
                                     product_name: item.name,
                                     product_code: sub_page.name,
-                                    url: item.url
+                                    url: item.url || sub_page.url || ''
                                 });
                             }
                         });
