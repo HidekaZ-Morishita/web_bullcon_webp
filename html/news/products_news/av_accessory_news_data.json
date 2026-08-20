@@ -4,8 +4,8 @@
     "type": "適合情報",
     "product": ["FreeTVing / DVD/CDプレーヤー"],
     "car_models": [ 
-        {"model_name":"アクア　R8/7～　（MXPK13.16）","specification":"【10.5インチディスプレイオーディオPlus/8インチディスプレイオーディオ】"},
-        {"model_name":"カローラクロスハイブリッド　R8/7～　（ZVG13.16.MXGH15）","specification":"【10.5インチディスプレイオーディオPlus/8インチディスプレイオーディオ】"}      ],
+        {"model_name":"アクア　＜一部改良＞　R8/7～　（MXPK13.16）","specification":"【10.5インチディスプレイオーディオPlus/8インチディスプレイオーディオ】"},
+        {"model_name":"カローラクロスハイブリッド　＜一部改良＞　R8/7～　（ZVG13.16.MXGH15）","specification":"【10.5インチディスプレイオーディオPlus/8インチディスプレイオーディオ】"}      ],
     "brand": ["トヨタ"],
     "body": [
       { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111AS』</a></span></b></p>", "align": "right"},
@@ -18,7 +18,7 @@
     "date": "2026年8月20日",
     "type": "適合情報",
     "product": ["FreeTVing / DVD/CDプレーヤー"],
-    "car_models": [ {"model_name":"ハリアーハイブリッド 　R8/8～　(AXUH80.85）", "specification":"【12.3インチディスプレイオーディオ（Plus・JBL含む）付車】"}],
+    "car_models": [ {"model_name":"ハリアーハイブリッド 　＜一部改良＞　R8/8～　(AXUH80.85）", "specification":"【12.3インチディスプレイオーディオ（Plus・JBL含む）付車】"}],
     "brand": ["トヨタ"],
     "body": [
       { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-110AS』</a></span></b></p>", "align": "right"},
@@ -32,8 +32,8 @@
     "type": "適合情報",
     "product": ["DVD/CDプレーヤー"],
     "car_models": [
-        {"model_name":"プリウス　R8/6～　＜一部改良後＞　（MXWH60.65）","specification":"【12.3インチディスプレイオーディオ Plus/8インチ ディスプレイオーディオ付車】"}, 
-        {"model_name":"プリウスPHEV　R8/6～　＜一部改良後＞　（MXWH61）","specification":"【12.3インチディスプレイオーディオ Plus/8インチ ディスプレイオーディオ付車】"}],
+        {"model_name":"プリウス　＜一部改良＞　R8/7～　（MXWH60.65）","specification":"【12.3インチディスプレイオーディオ Plus/8インチ ディスプレイオーディオ付車】"}, 
+        {"model_name":"プリウスPHEV　＜一部改良＞　R8/7～　（MXWH61）","specification":"【12.3インチディスプレイオーディオ Plus/8インチ ディスプレイオーディオ付車】"}],
     "brand": ["トヨタ"],
     "body": [
       { "type":"html", "content": "<p><b>DVD/CDプレーヤー<span style=\"color: blue;\"><a href=\"/html/products/AV_ACCESSORY/cdv/cdv01.htm\" target=\"_blank\">『AV-CDV01』</a></span></b></p>", "align": "right"}
@@ -78,6 +78,20 @@
     "body": [
       { "type":"html", "content": "<p><b>FreeTVing ｵｰﾄﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『FFT-234』</a></span></b></p>", "align": "right"},
       { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『MS-234』</a></span></b></p>", "align": "right"}
+    ]
+  },
+  {
+    "date": "2026年7月22日",
+    "type": "適合情報",
+    "product": ["FreeTVing"],
+    "car_models": [ 
+        {"model_name":"プリウス　＜一部改良＞　R8/7～　（MXWH60.65）","specification":"【12.3インチディスプレイオーディオ Plus/8インチ ディスプレイオーディオ付車】"}, 
+        {"model_name":"プリウスPHEV　＜一部改良＞　R8/7～　（MXWH61）","specification":"【12.3インチディスプレイオーディオ Plus/8インチ ディスプレイオーディオ付車】"}],
+    "brand": ["トヨタ"],
+    "body": [
+      { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111AS』</a></span></b></p>", "align": "right"},
+      { "type":"html", "content": "<p><b>FreeTVing ｻｰﾋﾞｽﾎｰﾙｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111ASC』</a></span></b></p>", "align": "right"},
+      { "type":"html", "content": "<p><b>FreeTVing ｽﾃｱﾘﾝｸﾞｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111AST』</a></span></b></p>", "align": "right"}
     ]
   },  
   {
@@ -132,10 +146,10 @@
     "date": "2026年6月24日",
     "type": "適合情報",
     "product": ["FreeTVing"], "car_models": [
-        {"model_name":"アルファード　R8/6～　＜一部改良後＞　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車<br>LCA（レーンチェンジアシスト）装着車】"}, 
-        {"model_name":"アルファードハイブリッド　R8/6～　＜一部改良後＞　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車<br>LCA（レーンチェンジアシスト）装着車】"},
-        {"model_name":"ヴェルファイア　R8/6～　＜一部改良後＞　（TAHA40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車<br>LCA（レーンチェンジアシスト）装着車】"},
-        {"model_name":"ヴェルファイアハイブリッド　R8/6～　＜一部改良後＞　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車<br>LCA（レーンチェンジアシスト）装着車】"}
+        {"model_name":"アルファード　＜一部改良＞　R8/6～　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車<br>LCA（レーンチェンジアシスト）装着車】"}, 
+        {"model_name":"アルファードハイブリッド　＜一部改良＞　R8/6～　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車<br>LCA（レーンチェンジアシスト）装着車】"},
+        {"model_name":"ヴェルファイア　＜一部改良＞　R8/6～　（TAHA40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車<br>LCA（レーンチェンジアシスト）装着車】"},
+        {"model_name":"ヴェルファイアハイブリッド　＜一部改良＞　R8/6～　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車<br>LCA（レーンチェンジアシスト）装着車】"}
     ],
     "brand": ["トヨタ"],
     "body": [
@@ -149,8 +163,8 @@
     "type": "適合情報",
     "product": ["FreeTVing"], 
     "car_models": [
-      {"model_name":"アルファード PHEV　R8/6～　(AGH40W.45W.AAHH40W.45W.AAHP45W）", "specification": "【14インチディスプレイオーディオPlus付車<br>LCA（レーンチェンジアシスト）装着車"},
-      {"model_name":"ヴェルファイアPHEV　R8/6～（TAHA40W.45W.AAHH40W.45W.AAHP45W）", "specification": "【14インチディスプレイオーディオPlus付車<br>LCA（レーンチェンジアシスト）装着車"}],
+      {"model_name":"アルファード PHEV　＜一部改良＞　R8/6～　(AGH40W.45W.AAHH40W.45W.AAHP45W）", "specification": "【14インチディスプレイオーディオPlus付車<br>LCA（レーンチェンジアシスト）装着車"},
+      {"model_name":"ヴェルファイアPHEV　＜一部改良＞　R8/6～　（TAHA40W.45W.AAHH40W.45W.AAHP45W）", "specification": "【14インチディスプレイオーディオPlus付車<br>LCA（レーンチェンジアシスト）装着車"}],
     "brand": ["トヨタ"],
     "body": [
       { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-109AS』</a></span></b></p>", "align": "right"},
@@ -163,12 +177,12 @@
     "product": ["DVD/CDプレーヤー"],
     "car_models": [
         {"plane_text":"※以下、メーカーオプションDVDプレーヤー非装着車"},
-        {"model_name":"アルファード　R8/6～　＜一部改良後＞　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）付車】"},
-        {"model_name":"アルファードハイブリッド　R8/6～　＜一部改良後＞　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）付車】"},
-        {"model_name":"アルファードハイブリッド エグゼクティブラウンジ　R8/6～　＜一部改良後＞　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）付車】"},
-        {"model_name":"ヴェルファイア　R8/6～　＜一部改良後＞（TAHA40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）付車】"},
-        {"model_name":"ヴェルファイアハイブリッド　R8/6～　＜一部改良後＞（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）付車】"},
-        {"model_name":"ヴェルファイアハイブリッド エグゼクティブラウンジ　R8/6～　＜一部改良後＞　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）付車】"}],
+        {"model_name":"アルファード　＜一部改良＞　R8/6～　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）付車】"},
+        {"model_name":"アルファードハイブリッド　＜一部改良＞　R8/6～　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）付車】"},
+        {"model_name":"アルファードハイブリッド エグゼクティブラウンジ　＜一部改良＞　R8/6～　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）付車】"},
+        {"model_name":"ヴェルファイア　＜一部改良＞　R8/6～　（TAHA40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）付車】"},
+        {"model_name":"ヴェルファイアハイブリッド　＜一部改良＞　R8/6～　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）付車】"},
+        {"model_name":"ヴェルファイアハイブリッド エグゼクティブラウンジ　＜一部改良＞　R8/6～（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）付車】"}],
     "brand": ["トヨタ"],
     "body": [
       { "type":"html", "content": "<p><b>DVD/CDプレーヤー<span style=\"color: blue;\"><a href=\"/html/products/AV_ACCESSORY/cdv/cdv01.htm\" target=\"_blank\">『AV-CDV01』</a></span></b></p>", "align": "right"}
@@ -280,11 +294,11 @@
   {
     "date": "2026年5月20日",
     "type": "適合情報",
-    "product": ["＜一部改良後＞FreeTVing"],
+    "product": ["FreeTVing"],
     "car_models": [
       {"plane_text":"【10.5インチ ディスプレイオーディオPlus装着車】<br>【8インチ ディスプレイオーディオ装着車】"},
-      {"model_name":"ヴォクシーハイブリッド　R8/5～　＜一部改良後＞　（ZWR90W.95W）"},
-      {"model_name":"ノアハイブリッド　R8/5～　＜一部改良後＞　（ZWR90W.95W）"}],
+      {"model_name":"ヴォクシーハイブリッド　＜一部改良＞　R8/5～　（ZWR90W.95W）"},
+      {"model_name":"ノアハイブリッド　＜一部改良＞　R8/5～　（ZWR90W.95W）"}],
     "brand": ["トヨタ"],
     "body": [
       { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111AS』</a></span></b></p>", "align": "right"},
@@ -298,8 +312,8 @@
     "product": ["DVD/CDプレーヤー"],
     "car_models": [
       {"plane_text":"【ﾒｰｶｰｵﾌﾟｼｮﾝDVDﾌﾟﾚｰﾔｰ非装着 10.5インチ ディスプレイオーディオPlus 装着車】<br>【ﾒｰｶｰｵﾌﾟｼｮﾝDVDﾌﾟﾚｰﾔｰ非装着 8インチ ディスプレイオーディオ 装着車】"},
-      {"model_name":"ヴォクシーハイブリッド　R8/5～　＜一部改良後＞　（ZWR90W.95W）"},
-      {"model_name":"ノアハイブリッド　R8/5～　＜一部改良後＞　（ZWR90W.95W）"}],
+      {"model_name":"ヴォクシーハイブリッド　＜一部改良＞　R8/5～　（ZWR90W.95W）"},
+      {"model_name":"ノアハイブリッド　＜一部改良＞　R8/5～　（ZWR90W.95W）"}],
     "brand": ["トヨタ"],
     "body": [
       { "type":"html", "content": "<p><b>DVD/CDプレーヤー<span style=\"color: blue;\"><a href=\"/html/products/AV_ACCESSORY/cdv/cdv01.htm\" target=\"_blank\">『AV-CDV01』</a></span></b></p>", "align": "right"}
@@ -491,7 +505,7 @@
     "date": "2026年3月5日",
     "type": "適合情報",
     "product": ["MAGICONE バックカメラ接続ユニット"], 
-    "car_models": [{"model_name":"デリカD:5　R8/1～（一部改良後）　（CV1W）","specification":"【マルチアラウンドモニター付車】"}
+    "car_models": [{"model_name":"デリカD:5　＜一部改良＞　R8/1～（CV1W）","specification":"【マルチアラウンドモニター付車】"}
                   ],
     "brand": ["ミツビシ"],
     "body": [
@@ -936,10 +950,10 @@
     "product": ["DVD/CDプレーヤー"],
     "car_models": [
       {"plane_text":"【ﾒｰｶｰｵﾌﾟｼｮﾝDVDﾌﾟﾚｰﾔｰ非装着 10.5インチ ディスプレイオーディオPlus 装着車】<br>【ﾒｰｶｰｵﾌﾟｼｮﾝDVDﾌﾟﾚｰﾔｰ非装着 8インチ ディスプレイオーディオ 装着車】"},
-      {"model_name":"ヴォクシー　R7/9～　＜一部改良後＞　（MZRA90W.95W）"},
-      {"model_name":"ヴォクシーハイブリッド　R7/9～　＜一部改良後＞　（ZWR90W.95W）"},
-      {"model_name":"ノア　R7/9～　＜一部改良後＞　（MZRA90W.95W）"},
-      {"model_name":"ノアハイブリッド　R7/9～　＜一部改良後＞　（ZWR90W.95W）"}],
+      {"model_name":"ヴォクシー　＜一部改良＞　R7/9～　（MZRA90W.95W）"},
+      {"model_name":"ヴォクシーハイブリッド　＜一部改良＞　R7/9～　（ZWR90W.95W）"},
+      {"model_name":"ノア　＜一部改良＞　R7/9～　（MZRA90W.95W）"},
+      {"model_name":"ノアハイブリッド　＜一部改良＞　R7/9～　（ZWR90W.95W）"}],
     "brand": ["トヨタ"],
     "body": [
       { "type":"html", "content": "<p><b>DVD/CDプレーヤー<span style=\"color: blue;\"><a href=\"/html/products/AV_ACCESSORY/cdv/cdv01.htm\" target=\"_blank\">『AV-CDV01』</a></span></b></p>", "align": "right"}
@@ -948,13 +962,13 @@
   {
     "date": "2025年9月12日",
     "type": "適合情報",
-    "product": ["＜一部改良後＞FreeTVing"],
+    "product": ["FreeTVing"],
     "car_models": [
       {"plane_text":"【10.5インチ ディスプレイオーディオPlus装着車】<br>【8インチ ディスプレイオーディオ装着車】"},
-      {"model_name":"ヴォクシー　R7/9～　＜一部改良後＞　（MZRA90W.95W）"},
-      {"model_name":"ヴォクシーハイブリッド　R7/9～　＜一部改良後＞　（ZWR90W.95W）"},
-      {"model_name":"ノア　R7/9～　＜一部改良後＞　（MZRA90W.95W）"},
-      {"model_name":"ノアハイブリッド　R7/9～　＜一部改良後＞　（ZWR90W.95W）"}],
+      {"model_name":"ヴォクシー　＜一部改良＞　R7/9～　（MZRA90W.95W）"},
+      {"model_name":"ヴォクシーハイブリッド　＜一部改良＞　R7/9～　（ZWR90W.95W）"},
+      {"model_name":"ノア　＜一部改良＞　R7/9～　（MZRA90W.95W）"},
+      {"model_name":"ノアハイブリッド　＜一部改良＞　R7/9～　（ZWR90W.95W）"}],
     "brand": ["トヨタ"],
     "body": [
       { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111AS』</a></span></b></p>", "align": "right"},
@@ -1004,8 +1018,8 @@
     "date": "2025年8月28日",
     "type": "適合情報",
     "product": ["FreeTVing / DVD/CDプレイヤー"],
-    "car_models": [{"model_name":"シエンタ　R7/8～　＜一部改良後＞　（MXPC10G）", "specification":"【10.5インチディスプレイオーディオPlus装着車】<br>【8インチディスプレイオーディオ装着車】"},
-    {"model_name":"シエンタハイブリッド　R7/8～　＜一部改良後＞　（MXPL10G.15G)","specification":"【10.5インチディスプレイオーディオPlus装着車】<br>【8インチディスプレイオーディオ装着車】"}],
+    "car_models": [{"model_name":"シエンタ　＜一部改良＞　R7/8～（MXPC10G）", "specification":"【10.5インチディスプレイオーディオPlus装着車】<br>【8インチディスプレイオーディオ装着車】"},
+    {"model_name":"シエンタハイブリッド　＜一部改良＞　R7/8～　（MXPL10G.15G)","specification":"【10.5インチディスプレイオーディオPlus装着車】<br>【8インチディスプレイオーディオ装着車】"}],
     "brand": ["トヨタ"],
     "body": [
       { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111AS』</a></span></b></p>", "align": "right"},
@@ -1274,7 +1288,7 @@
     "date": "2025年2月14日",
     "type": "適合情報",
     "product": ["MAGICONE HDMIハーネス / FreeTVing"], "car_models": [
-        {"model_name":"アルファードハイブリッド　R7/1～　＜一部改良後＞　（AAHH40W.45W）","specification":"【9.8インチディスプレイオーディオ（コネクティッドナビ対応）付車<br>LCA（レーンチェンジアシスト）非装着車】"}
+        {"model_name":"アルファードハイブリッド　＜一部改良＞　R7/1～　（AAHH40W.45W）","specification":"【9.8インチディスプレイオーディオ（コネクティッドナビ対応）付車<br>LCA（レーンチェンジアシスト）非装着車】"}
     ],
     "brand": ["トヨタ"],
     "body": [
@@ -1286,8 +1300,8 @@
     "date": "2025年2月14日",
     "type": "適合情報",
     "product": ["FreeTVing"], "car_models": [
-        {"model_name":"アルファード　R7/1～　＜一部改良後＞　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車<br>LCA（レーンチェンジアシスト）非装着車】"}, 
-        {"model_name":"アルファードハイブリッド　R7/1～　＜一部改良後＞　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車<br>LCA（レーンチェンジアシスト）非装着車】"}
+        {"model_name":"アルファード　＜一部改良＞　R7/1～（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車<br>LCA（レーンチェンジアシスト）非装着車】"}, 
+        {"model_name":"アルファードハイブリッド　＜一部改良＞　R7/1～　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車<br>LCA（レーンチェンジアシスト）非装着車】"}
     ],
     "brand": ["トヨタ"],
     "body": [
@@ -1299,10 +1313,10 @@
     "date": "2025年2月14日",
     "type": "適合情報",
     "product": ["FreeTVing"], "car_models": [
-        {"model_name":"アルファード　R7/1～　＜一部改良後＞　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車<br>LCA（レーンチェンジアシスト）装着車】"}, 
-        {"model_name":"アルファードハイブリッド　R7/1～　＜一部改良後＞　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車<br>LCA（レーンチェンジアシスト）装着車】"},
-        {"model_name":"ヴェルファイア　R7/1～　＜一部改良後＞　（TAHA40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車<br>LCA（レーンチェンジアシスト）装着車】"},
-        {"model_name":"ヴェルファイアハイブリッド　R7/1～　＜一部改良後＞　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車<br>LCA（レーンチェンジアシスト）装着車】"}
+        {"model_name":"アルファード　＜一部改良＞　R7/1～　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車<br>LCA（レーンチェンジアシスト）装着車】"}, 
+        {"model_name":"アルファードハイブリッド　＜一部改良＞　R7/1～　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車<br>LCA（レーンチェンジアシスト）装着車】"},
+        {"model_name":"ヴェルファイア　＜一部改良＞　R7/1～　（TAHA40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車<br>LCA（レーンチェンジアシスト）装着車】"},
+        {"model_name":"ヴェルファイアハイブリッド　＜一部改良＞　R7/1～　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）Plus付車<br>LCA（レーンチェンジアシスト）装着車】"}
     ],
     "brand": ["トヨタ"],
     "body": [
@@ -1316,11 +1330,11 @@
     "product": ["DVD/CDプレーヤー"],
     "car_models": [
         {"plane_text":"※以下、メーカーオプションDVDプレーヤー非装着車"},
-        {"model_name":"アルファード　R7/1～　＜一部改良後＞　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）付車】"},
-        {"model_name":"アルファードハイブリッド　R7/1～　＜一部改良後＞　（AAHH40W.45W）","specification":"【9.8インチディスプレイオーディオ（コネクティッドナビ対応）付車】<br>【14インチディスプレイオーディオ（コネクティッドナビ対応）付車】"},
+        {"model_name":"アルファード　＜一部改良＞　R7/1～　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）付車】"},
+        {"model_name":"アルファードハイブリッド　＜一部改良＞　R7/1～　（AAHH40W.45W）","specification":"【9.8インチディスプレイオーディオ（コネクティッドナビ対応）付車】<br>【14インチディスプレイオーディオ（コネクティッドナビ対応）付車】"},
         {"model_name":"アルファードハイブリッド エグゼクティブラウンジ　R5/7～　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）付車】"},
-        {"model_name":"ヴェルファイア　R7/1～　＜一部改良後＞（TAHA40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）付車】"},
-        {"model_name":"ヴェルファイアハイブリッド　R7/1～　＜一部改良後＞（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）付車】"},
+        {"model_name":"ヴェルファイア　＜一部改良＞　R7/1～　（TAHA40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）付車】"},
+        {"model_name":"ヴェルファイアハイブリッド　＜一部改良＞　R7/1～　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）付車】"},
         {"model_name":"ヴェルファイアハイブリッド エグゼクティブラウンジ　R5/7～　（AAHH40W.45W）","specification":"【14インチディスプレイオーディオ（コネクティッドナビ対応）付車】"}],
     "brand": ["トヨタ"],
     "body": [
@@ -1541,7 +1555,7 @@
   {
     "date": "2024年7月11日",
     "type": "適合情報",
-    "product": ["FreeTVing"], "car_models": [{"model_name":"クラウン クロスオーバー　R6/4～　＜一部改良後＞　（TZSH35.AZSH35）","specification":"【12.3インチ ディスプレイオーディオPlus装着車】<br> 【12.3インチ ディスプレイオーディオ装着車】"}],
+    "product": ["FreeTVing"], "car_models": [{"model_name":"クラウン クロスオーバー　＜一部改良＞　R6/4～　（TZSH35.AZSH35）","specification":"【12.3インチ ディスプレイオーディオPlus装着車】<br> 【12.3インチ ディスプレイオーディオ装着車】"}],
     "brand": ["トヨタ"],
     "body": [
       { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111AS』</a></span></b></p>", "align": "right"},
@@ -1667,7 +1681,7 @@
   {
     "date": "2024年4月18日",
     "type": "適合情報",
-    "product": ["FreeTVing"], "car_models": [{"model_name":"GRヤリス　R6/2～　＜一部改良後＞　（GXPA16）","specification":"【ディスプレイオーディオ装着車】"}],
+    "product": ["FreeTVing"], "car_models": [{"model_name":"GRヤリス　＜一部改良＞　R6/2～　（GXPA16）","specification":"【ディスプレイオーディオ装着車】"}],
     "brand": ["トヨタ"],
     "body": [
       { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111AS』</a></span></b></p>", "align": "right"},
@@ -1723,7 +1737,7 @@
   {
     "date": "2024年3月18日",
     "type": "適合情報",
-    "product": ["TELENAVing"], "car_models": [{"model_name":"CX-3　R6/3～　＜一部改良後＞　（DKLFY.DKLAY.DK8FY.DK8AY）","specification":"【地上デジタルTVチューナー付車】"}],
+    "product": ["TELENAVing"], "car_models": [{"model_name":"CX-3　＜一部改良＞　R6/3～　（DKLFY.DKLAY.DK8FY.DK8AY）","specification":"【地上デジタルTVチューナー付車】"}],
     "brand": ["マツダ"],
     "body": [
       { "type":"html", "content": "<p><b>TELENAVing<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-602』</a></span></b></p>", "align": "right"}
@@ -1899,7 +1913,7 @@
   {
     "date": "2024年1月26日",
     "type": "適合情報",
-    "product": ["TELENAVing"], "car_models": [{"model_name":"MAZDA 2　R6/1～　＜一部改良後＞　（DJLFS.DJLAS.DJ5FS.DJ5AS）","specification":"【8.8インチセンターディスプレイ+地上デジタルTVチューナー付車】"}],
+    "product": ["TELENAVing"], "car_models": [{"model_name":"MAZDA 2　＜一部改良＞　R6/1～　（DJLFS.DJLAS.DJ5FS.DJ5AS）","specification":"【8.8インチセンターディスプレイ+地上デジタルTVチューナー付車】"}],
     "brand": ["マツダ"],
     "body": [
       { "type":"html", "content": "<p><b>TELENAVing<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-602』</a></span></b></p>", "align": "right"}
@@ -2068,7 +2082,7 @@
   {
     "date": "2023年10月30日",
     "type": "適合情報",
-    "product": ["FreeTVing"], "car_models": [{"model_name":"CX-30　R5/11～　＜一部改良後＞　（DMEJ3R.DM8R）"}],
+    "product": ["FreeTVing"], "car_models": [{"model_name":"CX-30　＜一部改良＞　R5/11～　（DMEJ3R.DM8R）"}],
     "brand": ["マツダ"],
     "body": [
       { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-603S』</a></span></b></p>", "align": "right"}
@@ -2077,7 +2091,7 @@
   {
     "date": "2023年10月30日",
     "type": "適合情報",
-    "product": ["TELENAVing"], "car_models": [{"model_name":"CX-5　R5/11～　＜一部改良後＞）　（KFEP.KF2P.KF5P）","specification":"【MAZDA CONNECT + 地上ﾃﾞｼﾞﾀﾙTVチューナー付車】"}],
+    "product": ["TELENAVing"], "car_models": [{"model_name":"CX-5　＜一部改良＞　R5/11～　（KFEP.KF2P.KF5P）","specification":"【MAZDA CONNECT + 地上ﾃﾞｼﾞﾀﾙTVチューナー付車】"}],
     "brand": ["マツダ"],
     "body": [
       { "type":"html", "content": "<p><b>TELENAVing<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-602』</a></span></b></p>", "align": "right"}
@@ -2203,8 +2217,8 @@
     "type": "新製品情報",
     "product": ["FreeTVing"], "car_models": [
       {"plane_text":"【12.3インチディスプレイオーディオ（コネクティッドナビ対応）Plus装着車】"},
-      {"model_name":"NX　R5/3～　＜一部改良後＞　（AAZA20.25.TAZA25）"}, 
-      {"model_name":"NXハイブリッド　R5/3～　＜一部改良後＞　（AAZH20.25.26）"}, 
+      {"model_name":"NX　＜一部改良＞　R5/3～　（AAZA20.25.TAZA25）"}, 
+      {"model_name":"NXハイブリッド　＜一部改良＞　R5/3～　（AAZH20.25.26）"}, 
       {"model_name":"RX　R4/12～　（TALA10.15）"}, 
       {"model_name":"RXハイブリッド　R4/12～　（AALH10.15.16.TALH17）"}],
     "brand": ["レクサス"],
@@ -2227,8 +2241,8 @@
     "date": "2023年6月26日",
     "type": "適合情報",
     "product": ["FreeTVing"], "car_models": [
-      {"model_name":"MAZDA3ファストバック　R5/6～　＜一部改良後＞　（BP5R.BPFJ3R.BP8R.BPEK3R）"},
-      {"model_name":"MAZDA3セダン　R5/6～　＜一部改良後＞　（BPFJ3R.BP8R）"},
+      {"model_name":"MAZDA3ファストバック　＜一部改良＞　　R5/6～　（BP5R.BPFJ3R.BP8R.BPEK3R）"},
+      {"model_name":"MAZDA3セダン　＜一部改良＞　　R5/6～　（BPFJ3R.BP8R）"},
       {"model_name":"CX-60 PHEV　R4/9～　（KH5S3P）"}],
     "brand": ["マツダ"],
     "body": [
