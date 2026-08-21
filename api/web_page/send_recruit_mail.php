@@ -80,14 +80,16 @@ $body .= "メールアドレス: {$mailaddress}\n";
 $body .= "--------------------------------------------------\n\n";
 $body .= "備考・自己PR:\n" . (isset($_POST['opinion']) ? $_POST['opinion'] : '') . "\n";
 
-// ヘッダーの設定
-$headers = "From: " . mb_encode_mimeheader("Bullcon採用フォーム") . " <{$mailaddress}>\r\n";
-$headers .= "Reply-To: {$mailaddress}\r\n";
-$headers .= "X-Mailer: PHP/" . phpversion();
-
-// 文字エンコーディングの設定
-mb_language("Japanese");
+mb_language("uni");
 mb_internal_encoding("UTF-8");
+
+// ヘッダーの設定
+$headers = "From: " . mb_encode_mimeheader("Bullcon採用フォーム", "UTF-8", "B") . " <{$mailaddress}>\r\n";
+$headers .= "Reply-To: {$mailaddress}\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+$headers .= "Content-Transfer-Encoding: 8bit\r\n";
+$headers .= "X-Mailer: PHP/" . phpversion();
 
 // メール送信実行
 if (mb_send_mail($to, $subject, $body, $headers)) {
@@ -115,8 +117,11 @@ if (mb_send_mail($to, $subject, $body, $headers)) {
     $auto_body .= "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n";
     $auto_body .= "※このメールは自動送信されています。このメールへの返信はできません。\n";
 
-    $auto_headers = "From: " . mb_encode_mimeheader("Bullcon採用担当") . " <bullcon_recruit@fuji-denki.co.jp>\r\n";
+    $auto_headers = "From: " . mb_encode_mimeheader("Bullcon採用担当", "UTF-8", "B") . " <bullcon_recruit@fuji-denki.co.jp>\r\n";
     $auto_headers .= "Reply-To: bullcon_recruit@fuji-denki.co.jp\r\n";
+    $auto_headers .= "MIME-Version: 1.0\r\n";
+    $auto_headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+    $auto_headers .= "Content-Transfer-Encoding: 8bit\r\n";
     $auto_headers .= "X-Mailer: PHP/" . phpversion();
 
     mb_send_mail($mailaddress, $auto_subject, $auto_body, $auto_headers);

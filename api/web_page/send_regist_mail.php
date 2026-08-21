@@ -74,12 +74,15 @@ $body .= "製品の仕入先名: {$route}\n";
 $body .= "メールアドレス: {$mailaddress}\n";
 $body .= "--------------------------------------------------\n\n";
 
-$headers = "From: " . mb_encode_mimeheader("Bullcon登録申請") . " <{$mailaddress}>\r\n";
-$headers .= "Reply-To: {$mailaddress}\r\n";
-$headers .= "X-Mailer: PHP/" . phpversion();
-
-mb_language("Japanese");
+mb_language("uni");
 mb_internal_encoding("UTF-8");
+
+$headers = "From: " . mb_encode_mimeheader("Bullcon登録申請", "UTF-8", "B") . " <{$mailaddress}>\r\n";
+$headers .= "Reply-To: {$mailaddress}\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+$headers .= "Content-Transfer-Encoding: 8bit\r\n";
+$headers .= "X-Mailer: PHP/" . phpversion();
 
 if (mb_send_mail($to, $subject, $body, $headers)) {
 
@@ -106,8 +109,11 @@ if (mb_send_mail($to, $subject, $body, $headers)) {
     $auto_body .= "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n";
     $auto_body .= "※このメールは自動送信されています。このメールへの返信はできません。\n";
 
-    $auto_headers = "From: " . mb_encode_mimeheader("BullconID登録申請窓口") . " <touroku@fuji-denki.co.jp>\r\n";
+    $auto_headers = "From: " . mb_encode_mimeheader("BullconID登録申請窓口", "UTF-8", "B") . " <touroku@fuji-denki.co.jp>\r\n";
     $auto_headers .= "Reply-To: touroku@fuji-denki.co.jp\r\n";
+    $auto_headers .= "MIME-Version: 1.0\r\n";
+    $auto_headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+    $auto_headers .= "Content-Transfer-Encoding: 8bit\r\n";
     $auto_headers .= "X-Mailer: PHP/" . phpversion();
 
     mb_send_mail($mailaddress, $auto_subject, $auto_body, $auto_headers);
