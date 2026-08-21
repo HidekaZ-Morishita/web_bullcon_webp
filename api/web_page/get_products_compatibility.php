@@ -102,7 +102,7 @@ try {
 }
 
 function convertNullString($value) {
-    if ($value === 'null') {
+    if ($value === 'null' || $value === '') {
         return null;
     }
     return $value;

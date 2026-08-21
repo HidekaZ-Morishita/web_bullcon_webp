@@ -32,10 +32,10 @@ class YearFuncProductsSearch implements ProductSearchInterface
         $this->maker = $maker;
         $this->model = $model;
 
-        if (is_null($year)) {
+        if (empty($year)) {
             $this->userDateTimestamp = false;
         } else {
-            if (!is_null($month)) {
+            if (!empty($month)) {
                 $this->userDateTimestamp = strtotime("{$year}-{$month}-01");
             } else {
                 $this->userDateTimestamp = strtotime("{$year}-01-01"); //yearのみ入力のケース
