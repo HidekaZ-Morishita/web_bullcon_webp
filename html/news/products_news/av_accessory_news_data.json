@@ -1,5 +1,30 @@
 [
   {
+    "date": "2026年8月21日",
+    "type": "適合情報",
+    "product": ["FreeTVing"], 
+    "car_models": [
+        {"plane_text":"【スズキディーラーオプション　2025年モデルナビゲーション】"},
+        {"model_name":"99098-65Q26-P02（CN-FZ8B6ZA）","specification":"【8インチスタンダードプラスモデル】≪※装着車量条件有≫"}],
+    "brand": ["スズキ"],
+    "body": [
+      { "type":"html", "content": "<p><b>FreeTVing<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『FFT-194』</a></span></b></p>", "align": "right"}
+    ]
+  },
+  {
+    "date": "2026年8月21日",
+    "type": "適合情報",
+    "product": ["FreeTVing"], 
+    "car_models": [
+        {"plane_text":"【スズキディーラーオプション　2025年モデルナビゲーション】"},
+        {"model_name":"99098-65Q26-P02（CN-FZ8B6ZA）","specification":"【8インチスタンダードプラスモデル】≪※装着車量条件有≫"}],
+    "brand": ["スズキ"],
+    "body": [
+      { "type":"html", "content": "<p><b>FreeTVing<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『FFT-231』</a></span></b></p>", "align": "right"},
+      { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『MS-231』</a></span></b></p>", "align": "right"}
+    ]
+  },
+  {
     "date": "2026年8月20日",
     "type": "適合情報",
     "product": ["FreeTVing / DVD/CDプレーヤー"],
