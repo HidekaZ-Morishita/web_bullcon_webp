@@ -1,5 +1,28 @@
 [
   {
+    "date": "2026年9月2日",
+    "type": "新製品情報",
+    "product": ["スーパー LED ルームランプⅡ"],
+    "brand": ["トヨタ", "ニッサン", "ミツビシ"],
+    "body": [
+      { "type":"html", "content": "<p><b><span style=\"color: blue;\"><a href=\"/html/products/LED_BULB/super_led_roomlamp2/super_led_roomlamp2.htm\" target=\"_blank\">スーパーLEDルームランプⅡ</a></span></b></p>"},
+      { "type": "html", "content": "トヨタ　ハイエースバン スーパーGL　R8/2～　（H200系/9型）"},
+      { "type":"html", "content": "<p><b>スーパーLEDルームランプⅡ<span style=\"color: blue;\"><a href=\"/html/products/LED_BULB/super_led_roomlamp2/super_led_roomlamp2.htm\" target=\"_blank\">『SLL-1036』</a></span></b></p>", "align": "right"},
+      { "type": "html", "content": "トヨタ　ハイエースワゴン　GL R8/2～　（H200系/9型）"},
+      { "type":"html", "content": "<p><b>スーパーLEDルームランプⅡ<span style=\"color: blue;\"><a href=\"/html/products/LED_BULB/super_led_roomlamp2/super_led_roomlamp2.htm\" target=\"_blank\">『SLL-1037』</a></span></b></p>", "align": "right"},
+      { "type": "html", "content": "トヨタ　ハイエース　コミューターGL　R8/2～　（H200系/9型）<br>トヨタ　ハイエース　グランドキャビン　R8/2～　（H200系/9型）"},
+      { "type":"html", "content": "<p><b>スーパーLEDルームランプⅡ<span style=\"color: blue;\"><a href=\"/html/products/LED_BULB/super_led_roomlamp2/super_led_roomlamp2.htm\" target=\"_blank\">『SLL-1038』</a></span></b></p>", "align": "right"},
+      { "type": "html", "content": "トヨタ　ハイエースワゴン　DX　R8/2～　（H200系/9型）"},
+      { "type":"html", "content": "<p><b>スーパーLEDルームランプⅡ<span style=\"color: blue;\"><a href=\"/html/products/LED_BULB/super_led_roomlamp2/super_led_roomlamp2.htm\" target=\"_blank\">『SLL-1039』</a></span></b></p>", "align": "right"},
+      { "type": "html", "content": "トヨタ　ランドクルーザーFJ　R8/2～　（TRJ240W）"},
+      { "type":"html", "content": "<p><b>スーパーLEDルームランプⅡ<span style=\"color: blue;\"><a href=\"/html/products/LED_BULB/super_led_roomlamp2/super_led_roomlamp2.htm\" target=\"_blank\">『SLL-1040』</a></span></b></p>", "align": "right"},
+      { "type": "html", "content": "日産　ルークス　R8/2～　（BB#A）"},
+      { "type":"html", "content": "<p><b>スーパーLEDルームランプⅡ<span style=\"color: blue;\"><a href=\"/html/products/LED_BULB/super_led_roomlamp2/super_led_roomlamp2.htm\" target=\"_blank\">『SLL-2012』</a></span></b></p>", "align": "right"},
+      { "type": "html", "content": "三菱　ekスペース　R8/2～　（BA#A）<br>三菱　デリカミニ　R8/2～　（BA#A）"},
+      { "type":"html", "content": "<p><b>スーパーLEDルームランプⅡ<span style=\"color: blue;\"><a href=\"/html/products/LED_BULB/super_led_roomlamp2/super_led_roomlamp2.htm\" target=\"_blank\">『SLL-2012』</a></span></b></p>", "align": "right"}
+      ]
+  },
+  {
     "date": "2026年2月16日",
     "type": "適合情報",
     "product": ["オートドアミラーコントローラー"],
