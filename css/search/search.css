@@ -164,7 +164,8 @@
     border-bottom: none;
 }
 
-.results-list li a {
+.results-list li a,
+.results-list li .result-item-content {
     display: flex;
     flex-direction: column;
     color: var(--color-body-text);
@@ -179,6 +180,11 @@
 
 .results-list li:hover {
     background-color: var(--color-white-emphasis);
+}
+
+.results-list li.no-link:hover {
+    background-color: transparent;
+    cursor: default;
 }
 
 .result-title {
