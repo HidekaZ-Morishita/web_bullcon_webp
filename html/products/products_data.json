@@ -778,6 +778,16 @@
         "url": "/html/products/products.html?category=led_bulb",
         "products": [
           {
+            "id": "glf_l1b",
+            "name": "LEDフォグランプ グロリアス L1Bﾀｲﾌﾟ",
+            "short_description": "純正LEDフォグランプ（L1B）交換用LEDランプ。2,400lm / 6,000K / 3000K",
+            "image_path": "/images/products/led_foglamp_glorious.webp",
+            "main_page": {
+              "url": "/html/products/LED_BULB/glf-l1b/glf-l1b.htm"
+            },
+            "sub_pages": [{ "name": "GL-L1BW/GL-L1BY兼用", "url": "", "manual_url": "/pdf/products/LED_BULB/GL-L1B.pdf" }]
+          },
+          {
             "id": "glh_h",
             "name": "LEDヘッドランプ グロリアス Hｼﾘｰｽﾞ",
             "short_description": "ハロゲンランプ（H4/H11）交換用LEDヘッドランプ。20,000lm / 6,000K",

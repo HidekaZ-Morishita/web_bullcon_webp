@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+     /* 全体の外枠設定 */
+        .glorious-wrapper {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            padding: 10px 15px;     /* 左右のパディングを狭くして文字の表示領域を広げる */
+            width: 1000px;          /* 親テーブルの幅（1000px）に完全に固定 */
+            margin: 0 auto;         /* センタリング */
+            line-height: 1.4;
+            box-sizing: border-box; /* paddingを含めて1000pxにする */
+            position: relative; 
+            overflow: hidden;   
+        }
+
+        /* --- 左右の流れるライン（上から下へ） --- */
+        .glorious-wrapper::before,
+        .glorious-wrapper::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 6px; 
+            height: 100%;
+            /* グラデーションを「金・白・金」の順に配置 
+               background-sizeを縦に300%にすることで、ループの継ぎ目を滑らかにします
+            */
+            background: linear-gradient(to bottom, 
+                #d4af37 0%, 
+                #ffffff 50%, 
+                #d4af37 100%);
+            background-size: 100% 300%; 
+            animation: flowDown 5s infinite linear;
+        }
+
+        /* 左側の配置 */
+        .glorious-wrapper::before { left: 0; }
+        /* 右側の配置 */
+        .glorious-wrapper::after { right: 0; }
+
+        /* 【重要】上から下へ動かす設定 
+           background-positionをマイナスから0へ動かすことで
+           「上から下に引っ張る」動きになります。
+        */
+        @keyframes flowDown {
+            0% { background-position: 0% 300%; }
+            100% { background-position: 0% 0%; }
+        }
+
+        /* 導入文 */
+        .intro-text {
+            font-size: 0.85rem;
+            color: #ccc;
+            margin-bottom: 8px;
+        }
+
+        .intro-focus {
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        /* ブランドエリア */
+        .brand-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid #333;
+            margin-bottom: 6px;
+            padding-bottom: 6px;
+        }
+
+        .brand-name-only {
+            font-family: "Sawarabi Mincho", "YuMincho", "Hiragino Mincho ProN", serif;
+            font-size: 1.4rem;
+            font-weight: 900;
+            color: #d4af37;
+            white-space: nowrap;
+            letter-spacing: 0.05em;
+            text-shadow: 0.5px 0.5px 0px #d4af37; 
+        }
+
+        .brand-description {
+            font-size: 0.85rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        /* 中央テキストの光る演出（左から右） */
+        .highlight-text {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
+            font-size: 1.3rem;
+            font-weight: 900;
+            white-space: nowrap;
+            display: inline-block;
+            background: linear-gradient(to right, #d4af37 0%, #d4af37 40%, #ffffff 50%, #d4af37 60%, #d4af37 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            -webkit-text-fill-color: transparent;
+            animation: shineLeftToRight 3s infinite linear;
+        }
+
+        @keyframes shineLeftToRight {
+            0% { background-position: 200% center; }
+            100% { background-position: -200% center; }
+        }
+
+        /* 特徴セクション */
+        .feature-section {
+            display: flex;
+            align-items: flex-start;
+            border-bottom: 1px solid #333;
+            margin-bottom: 6px;
+            padding-bottom: 6px;
+        }
+
+        .feature-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .feature-title {
+            font-weight: bold;
+            flex: 0 0 150px;
+            color: #d4af37;
+            font-size: 1.15rem;
+            letter-spacing: -0.02em;
+            padding-top: 1px;
+            white-space: nowrap;
+        }
+
+        .feature-title::before {
+            content: "◆";
+            margin-right: 4px;
+            font-size: 0.9rem;
+            vertical-align: middle;
+        }
+
+        .feature-detail {
+            flex: 1;
+            font-size: 0.88rem;
+        }
+
+        .highlight-impact {
+            color: #d4af37;
+            font-size: 1.3rem;
+            font-weight: 900;
+            font-style: italic;
+        }
+
+        .red-marker {
+            display: inline;
+            background: linear-gradient(transparent 94%, #ff1a00 94%); 
+            font-weight: bold;
+            padding-bottom: 1px;
+        }
+
+        .yellow-marker {
+            display: inline;
+            background: linear-gradient(transparent 94%, #d4af37 94%);
+            font-weight: bold;
+            padding-bottom: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .brand-area { flex-direction: column; align-items: flex-start; gap: 2px; }
+            .feature-section { flex-direction: column; gap: 2px; }
+            .feature-title { flex: none; font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="glorious-wrapper">
+    <div class="intro-text">
+        多くの車両に採用されている【Ｌ１Ｂ】形状のフォグバルブ
+        <span class="intro-focus">
+            「<span class="yellow-marker">もう少し明るければ…</span>」 
+            「<span class="yellow-marker">黄色が良いのに･･･</span>」
+        </span>と感じたことはありませんか？
+    </div>
+
+    <div class="brand-area">
+        <span class="brand-name-only">GLORIOUS LED FOG BULB</span>
+        <span class="brand-description">
+            は専用設計による安定した光量を追求し、
+            <span class="highlight-text">夜道を明るく照らします。</span>
+        </span>
+    </div>
+
+    <div class="feature-section">
+        <div class="feature-title">満足できる輝度</div>
+        <div class="feature-detail">
+            <b>純正比<span class="highlight-impact">６８０%</span>（２４００ｌｍ/１灯）の圧倒的光量。</b>※<br>
+            <span class="red-marker">純正の物足りなさを解消し、雨夜や濃霧などの悪天候下でもフォグ本来の視認性を発揮。</span>
+        </div>
+    </div>
+
+    <div class="feature-section">
+        <div class="feature-title">精密な光軸再現</div>
+        <div class="feature-detail">
+            <b>Ｌ１Ｂ専用の配光設計により、対向車への幻惑を徹底排除。</b><br>
+            <span class="red-marker">路面だけを鋭く、より広範囲を明るく正確に照射。</span>
+        </div>
+    </div>
+
+    <div class="feature-section">
+        <div class="feature-title">効率の良い冷却</div>
+        <div class="feature-detail">
+            <b>高熱伝導アルミと冷却ファンの相乗効果で熱を瞬時に放出。</b><br>
+            <span class="red-marker">発熱に伴う光量低下や劣化を防ぎ、常に最高のパフォーマンスを維持。</span>
+        </div>
+    </div>
+
+    <div class="feature-section">
+        <div class="feature-title">一体型モデル</div>
+        <div class="feature-detail">
+            <b>純正と同形状のワンユニット設計で<span class="red-marker">複雑な配線加工は一切不要。</span></b><br>
+            <b>カスタム初心者でも比較的簡単に交換できるスマートな装着感を実現。</b>
+        </div>
+    </div>
+
+    <div class="feature-section">
+        <div class="feature-title">自信のある品質</div>
+        <div class="feature-detail">
+            <b>厳格な品質管理による生産で、高出力ながら安定した点灯を実現。</b><br>
+            <b>純正品を凌駕する明るさ、長寿命に安定性のすべてを兼ね備えた</b><span class="red-marker" style="color: #d4af37; font-size: 1.1rem;">最高峰モデル</span>。
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
