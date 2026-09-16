@@ -182,7 +182,7 @@ td img {display: block;}body {
 .slideshow-container {
     position: relative;
     width: 1000px; /* サイト全体の幅に合わせる */
-    height: 222px; /* 3792×843の比率(約4.5:1)に合わせた高さ */
+    height: 222px; /* 3792×843の比率に合わせた高さ */
     margin: 0 auto;
     overflow: hidden;
 }
@@ -195,11 +195,44 @@ td img {display: block;}body {
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transition: opacity 0.6s ease-in-out; /* ふんわり切り替わる時間（0.6秒） */
+    /* 総周期を14.4秒に変更 */
+    animation: slideAnimation 14.4s infinite;
 }
 
-.slideshow-container .slide.active {
-    opacity: 1;
+/* 4枚の遅延時間を更新（1枚あたり3.6秒ずつずらす） */
+.slideshow-container .slide:nth-child(1) {
+    animation-delay: 0s;
+}
+.slideshow-container .slide:nth-child(2) {
+    animation-delay: 3.6s;
+}
+.slideshow-container .slide:nth-child(3) {
+    animation-delay: 7.2s;
+}
+.slideshow-container .slide:nth-child(4) {
+    animation-delay: 10.8s;
+}
+
+/* フェード切り替えのアニメーション定義（総周期14.4秒を基準に計算） */
+@keyframes slideAnimation {
+    0% {
+        opacity: 0;
+    }
+    /* 0.6秒かけて表示 (0.6 / 14.4 = 約4.17%) */
+    4.17% {
+        opacity: 1;
+    }
+    /* 静止3秒分を保持 (3.6秒時点 / 14.4 = 25%) */
+    25% {
+        opacity: 1;
+    }
+    /* 次の0.6秒かけてフェードアウト (3.6 + 0.6 = 4.2秒時点 / 14.4 = 約29.17%) */
+    29.17% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
     
 </style>
