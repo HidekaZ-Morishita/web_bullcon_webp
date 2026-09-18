@@ -3,7 +3,7 @@
     "date": "2026年9月18日",
     "type": "新製品情報",
     "product": ["ステアリングスイッチ切替ユニット"], 
-        "car_models": [{"model_name":"デリカミニ　R7/11～　（BA1A.BA2A.BA5A.BA6A）","specification":"ﾅﾋﾞ装着用ｽﾍﾟｼｬﾙﾊﾟｯｹｰｼﾞ付車<br>＋ｱﾙﾊﾟｲﾝﾊﾟｰﾌｪｸﾄｷｯﾄ【PF11NX2S-DM-BA-AM】<br>ｱﾙﾊﾟｲﾝﾊﾟｰﾌｪｸﾄｷｯﾄ【PF11DA-DM-BA-AM】"}],
+        "car_models": [{"model_name":"デリカミニ　R7/11～　（BA1A.BA2A.BA5A.BA6A）","specification":"ステアリングスイッチ（オーディオ・ハンズフリーフォン）付車＋<br>アルパイン　パーフェクトキット　ビッグＸ１１【ＰＦ１１ＮＸ２Ｓ-ＤＭ-ＢＡ-ＡＭ】<br>アルパイン　パーフェクトキット　ビッグＤＡ１１【ＰＦ１１ＤＡ-ＤＭ-ＢＡ-ＡＭ】"}],
     "brand": ["ミツビシ"],
     "body": [{ "type": "html", "content": "<span style=\"color: red;\"\"font-size: 1.1rem;\">【2026年9月24日 販売開始】</spam>", "align": "center"},
       { "type":"html", "content": "<p><b>ステアリングスイッチ切替ユニット<span style=\"color: blue;\"><a href=\"/html/products/CAR_ACCESSORY/swc-exc/swc-n008/swc-n008.htm\" target=\"_blank\">『SWC-N008ALP』</a></span></b></p>", "align": "right"}
