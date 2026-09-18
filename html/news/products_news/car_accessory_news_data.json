@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026年9月18日",
+    "type": "新製品情報",
+    "product": ["ステアリングスイッチ切替ユニット"], 
+        "car_models": [{"model_name":"デリカミニ　R7/11～　（BA1A.BA2A.BA5A.BA6A）","specification":"ﾅﾋﾞ装着用ｽﾍﾟｼｬﾙﾊﾟｯｹｰｼﾞ付車<br>＋ｱﾙﾊﾟｲﾝﾊﾟｰﾌｪｸﾄｷｯﾄ【PF11NX2S-DM-BA-AM】<br>ｱﾙﾊﾟｲﾝﾊﾟｰﾌｪｸﾄｷｯﾄ【PF11DA-DM-BA-AM】"}],
+    "brand": ["ミツビシ"],
+    "body": [{ "type": "html", "content": "<span style=\"color: red;\"\"font-size: 1.1rem;\">【2026年9月24日 販売開始】</spam>", "align": "center"},
+      { "type":"html", "content": "<p><b>ステアリングスイッチ切替ユニット<span style=\"color: blue;\"><a href=\"/html/products/CAR_ACCESSORY/swc-exc/swc-n008/swc-n008.htm\" target=\"_blank\">『SWC-N008ALP』</a></span></b></p>", "align": "right"}
+    ]
+  },
+  {
     "date": "2026年9月16日",
     "type": "新製品情報",
     "product": ["GLORIOUS LED FOG BULB"],
@@ -43,16 +53,16 @@
                     {"model_name":"ハイエースワゴン 　R8/2～　(TRH224W.214W.229W.219W223B.228B）"}],
     "brand": ["トヨタ"],
     "body": [{ "type":"html", "content": "<p><b>オートドアミラーコントローラー<br><span style=\"color: blue;\"><a href=\"/html/products/CAR_ACCESSORY/door_mirror/door_mirror.htm\" target=\"_blank\">『ADM-102・ADL-11・ADK-98』</a></span></b></p>", "align": "right"}]
-  },{
-    "date": "2026年1月21日",
+  },
+  {
+    "date": "2026年1月30日",
     "type": "新製品情報",
-    "product": ["ステアリングスイッチ切替ユニット"], "car_models": [{"model_name":"ルークス　R7/11～　（BB1A.BB2A.BB5A.BB6A）"},
-    {"model_name":"ekスペース　R7/11～　（BA1A. BA5A）"},
-    {"model_name":"デリカミニ　R7/11～　（BA1A.BA2A.BA5A.BA6A）"}
-  ],
-    "brand": ["ニッサン", "ミツビシ"],
-    "body": [
-      { "type":"html", "content": "<p><b>ステアリングスイッチ切替ユニット<span style=\"color: blue;\"><a href=\"/html/products/CAR_ACCESSORY/swc-exc/swc-n008/swc-n008.htm\" target=\"_blank\">『SWC-N008』</a></span></b></p>", "align": "right"}
+    "product": ["ステアリングスイッチ切替ユニット"], 
+    "car_models": [{"model_name":"日産　ルークス　R7/5～　（BB1A.BB2A.BB5A.BB6A）","specification":"ｽﾃｱﾘﾝｸﾞｽｲｯﾁ（ｵｰﾃﾞｨｵ･ﾊﾝｽﾞﾌﾘｰﾌｫﾝ）付車<br>＋ｽﾃｱﾘﾝｸﾞｽｲｯﾁ学習機能付市販ﾅﾋﾞ取付用"}, 
+    {"model_name":"三菱　ekスペース　R7/11～　（BA1A.BA5A）","specification":"ｽﾃｱﾘﾝｸﾞｽｲｯﾁ（ｵｰﾃﾞｨｵ･ﾊﾝｽﾞﾌﾘｰﾌｫﾝ）付車<br>＋ｽﾃｱﾘﾝｸﾞｽｲｯﾁ学習機能付市販ﾅﾋﾞ取付用"},
+    {"model_name":"三菱　デリカミニ　R7/11～　（BA1A.BA2A.BA5A.BA6A）","specification":"ｽﾃｱﾘﾝｸﾞｽｲｯﾁ（ｵｰﾃﾞｨｵ･ﾊﾝｽﾞﾌﾘｰﾌｫﾝ）付車<br>＋ｽﾃｱﾘﾝｸﾞｽｲｯﾁ学習機能付市販ﾅﾋﾞ取付用"}],
+    "brand": ["ニッサン","ミツビシ"],
+    "body": [{ "type":"html", "content": "<p><b>ステアリングスイッチ切替ユニット<span style=\"color: blue;\"><a href=\"/html/products/CAR_ACCESSORY/swc-exc/swc-n008/swc-n008.htm\" target=\"_blank\">『SWC-N008』</a></span></b></p>", "align": "right"}
     ]
   },
   {
@@ -235,7 +245,7 @@
     "car_models": [{"model_name":"ヴェゼル　R6/5～　（RV3.4）","specification":"ﾅﾋﾞ装着用ｽﾍﾟｼｬﾙﾊﾟｯｹｰｼﾞ付車"}, 
     {"model_name":"ヴェゼル e:HEV　R6/5～　（RV5.6）","specification":"ﾅﾋﾞ装着用ｽﾍﾟｼｬﾙﾊﾟｯｹｰｼﾞ付車"}],
     "brand": ["ホンダ"],
-    "body": [{ "type":"html", "content": "<p><b>ステアリングスイッチ切替ユニット<span style=\"color: blue;\"><a href=\"/html/products/CAR_ACCESSORY/swc-exc/swc-h006/swc-h006.htm\" target=\"_blank\">『SWC-H006』</a></span>(カメラ視点切替式)</b></p>", "align": "right"}
+    "body": [{ "type":"html", "content": "<p><b>ステアリングスイッチ切替ユニット<span style=\"color: blue;\"><a href=\"/html/products/CAR_ACCESSORY/swc-exc/swc-h006/swc-h006.htm\" target=\"_blank\">『SWC-H006』</a></span></b></p>", "align": "right"}
     ]
   },
   {
