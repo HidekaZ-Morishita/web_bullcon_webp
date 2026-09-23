@@ -727,7 +727,8 @@
               { "name": "SWC-N005", "url": "/html/products/CAR_ACCESSORY/swc-exc/swc-n005/swc-n005.htm", "manual_url": "/pdf/products/CAR_ACCESSORY/SWC-N005.pdf" },
               { "name": "SWC-H006", "url": "/html/products/CAR_ACCESSORY/swc-exc/swc-h006/swc-h006.htm", "manual_url": "/pdf/products/CAR_ACCESSORY/swc-h006.pdf" },
               { "name": "SWC-T007", "url": "/html/products/CAR_ACCESSORY/swc-exc/swc-t007/swc-t007.htm", "manual_url": "/pdf/products/CAR_ACCESSORY/swc-t007.pdf" },
-              { "name": "SWC-N008", "url": "/html/products/CAR_ACCESSORY/swc-exc/swc-n008/swc-n008.htm", "manual_url": "/pdf/products/CAR_ACCESSORY/SWC-N008.pdf" }
+              { "name": "SWC-N008", "url": "/html/products/CAR_ACCESSORY/swc-exc/swc-n008/swc-n008.htm", "manual_url": "/pdf/products/CAR_ACCESSORY/SWC-N008.pdf" },
+              { "name": "SWC-N008ALP", "url": "/html/products/CAR_ACCESSORY/swc-exc/swc-n008/swc-n008.htm", "manual_url": "/pdf/products/CAR_ACCESSORY/SWC-N008ALP.pdf" }
             ]
           },
           {
@@ -785,7 +786,7 @@
             "main_page": {
               "url": "/html/products/LED_BULB/glf-l1b/glf-l1b.htm"
             },
-            "sub_pages": [{ "name": "GL-L1BW/GL-L1BY兼用", "url": "", "manual_url": "/pdf/products/LED_BULB/GL-L1B.pdf" }]
+            "sub_pages": [{ "name": "GL-L1BW/GL-L1BY", "url": "", "manual_url": "/pdf/products/LED_BULB/GL-L1B.pdf" }]
           },
           {
             "id": "glh_h",
@@ -929,6 +930,11 @@
               { "name": "SLL-1033", "url": "", "manual_url": "/pdf/products/LED_BULB/SLL-1033.pdf"},
               { "name": "SLL-1034", "url": "", "manual_url": "/pdf/products/LED_BULB/SLL-1034.pdf"},
               { "name": "SLL-1035", "url": "", "manual_url": "/pdf/products/LED_BULB/SLL-1035.pdf"},
+              { "name": "SLL-1036", "url": "", "manual_url": "/pdf/products/LED_BULB/SLL-1036.pdf"},
+              { "name": "SLL-1037", "url": "", "manual_url": "/pdf/products/LED_BULB/SLL-1037.pdf"},              
+              { "name": "SLL-1038", "url": "", "manual_url": "/pdf/products/LED_BULB/SLL-1038.pdf"},              
+              { "name": "SLL-1039", "url": "", "manual_url": "/pdf/products/LED_BULB/SLL-1039.pdf"},
+              { "name": "SLL-1040", "url": "", "manual_url": "/pdf/products/LED_BULB/SLL-1040.pdf"},
               { "name": "SLL-2001", "url": "", "manual_url": "/pdf/products/LED_BULB/SLL-2001.pdf"},
               { "name": "SLL-2002", "url": "", "manual_url": "/pdf/products/LED_BULB/SLL-2002.pdf"},
               { "name": "SLL-2003", "url": "", "manual_url": "/pdf/products/LED_BULB/SLL-2003.pdf"},
@@ -940,6 +946,7 @@
               { "name": "SLL-2009", "url": "", "manual_url": "/pdf/products/LED_BULB/SLL-2009.pdf"},
               { "name": "SLL-2010", "url": "", "manual_url": "/pdf/products/LED_BULB/SLL-2010.pdf"},
               { "name": "SLL-2011", "url": "", "manual_url": "/pdf/products/LED_BULB/SLL-2011.pdf"},
+              { "name": "SLL-2012", "url": "", "manual_url": "/pdf/products/LED_BULB/SLL-2012.pdf"},
               { "name": "SLL-3001", "url": "", "manual_url": "/pdf/products/LED_BULB/SLL-3001.pdf"},
               { "name": "SLL-3002", "url": "", "manual_url": "/pdf/products/LED_BULB/SLL-3002.pdf"},
               { "name": "SLL-3003", "url": "", "manual_url": "/pdf/products/LED_BULB/SLL-3003.pdf"},
