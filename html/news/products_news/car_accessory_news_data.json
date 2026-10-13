@@ -3,7 +3,7 @@
     "date": "2025年10月13日",
     "type": "新製品情報",
     "product": ["オプションコネクターハーネス"], "car_models": [{"model_name":"RAV4　R8/1～　（AXAN64）"},
-  {"model_name":"RAV4 PHEV　R8/3～　（AXAP64）"}],
+  {"model_name":"RAV4　PHEV　R8/3～　（AXAP64）"}],
     "brand": ["トヨタ"],
     "body": [{ "type":"html", "content": "<p><b>オプションコネクターハーネス<span style=\"color: blue;\"><a href=\"/html/products/POWER/op_cn/op_cn.htm\" target=\"_blank\">『FC-T08（8ピン）』</a></span></b></p>", "align": "right"}]
   },
