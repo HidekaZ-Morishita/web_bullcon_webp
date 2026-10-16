@@ -34,7 +34,7 @@ productInfo.name === 'DVD/CDプレイヤー'; if (isFixedOptionType) { currentOp
 <span>/</span>
 <select id="month-select" class="form-select"></select>
 </div>
-`; formContainer.appendChild(yearMonthGroup); populateOptions(document.getElementById('year-select'), CAR_YEARS, '年'); populateOptions(document.getElementById('month-select'), MONTHS, '月 (未入力：1月固定)'); if (selectedYear) document.getElementById('year-select').value = selectedYear; if (selectedMonth) document.getElementById('month-select').value = selectedMonth; } } else if (currentProcessType === 'dealer_process') { const yearGroup = document.createElement('div'); yearGroup.className = 'form-group'; yearGroup.innerHTML = `
+`; formContainer.appendChild(yearMonthGroup); populateOptions(document.getElementById('year-select'), CAR_YEARS, '年'); populateOptions(document.getElementById('month-select'), MONTHS, '月 (未入力：12月固定)'); if (selectedYear) document.getElementById('year-select').value = selectedYear; if (selectedMonth) document.getElementById('month-select').value = selectedMonth; } } else if (currentProcessType === 'dealer_process') { const yearGroup = document.createElement('div'); yearGroup.className = 'form-group'; yearGroup.innerHTML = `
 <label for="year-select">モニターモデル年</label>
 <select id="year-select" class="form-select"></select>
 `; formContainer.appendChild(yearGroup); const availableYears = monitorList[selectedMaker] ? [...new Set(monitorList[selectedMaker].map(item => String(item.year)))] : []; const processedYears = BASIC_YEARS
