@@ -38,7 +38,7 @@ class YearFuncProductsSearch implements ProductSearchInterface
             if (!empty($month)) {
                 $this->userDateTimestamp = strtotime("{$year}-{$month}-01");
             } else {
-                $this->userDateTimestamp = strtotime("{$year}-01-01"); //yearのみ入力のケース
+                $this->userDateTimestamp = strtotime("{$year}-12-01"); //yearのみ入力のケース (未入力時は12月固定)
             }
         }
     }

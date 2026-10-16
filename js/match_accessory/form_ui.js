@@ -142,7 +142,7 @@ async function generateSpecificProductForm(formContainer, productInfo, state) {
                         formContainer.appendChild(yearMonthGroup);
 
                         populateOptions(document.getElementById('year-select'), CAR_YEARS, '年');
-                        populateOptions(document.getElementById('month-select'), MONTHS, '月 (未入力：1月固定)');
+                        populateOptions(document.getElementById('month-select'), MONTHS, '月 (未入力：12月固定)');
 
                         if (selectedYear) document.getElementById('year-select').value = selectedYear;
                         if (selectedMonth) document.getElementById('month-select').value = selectedMonth;
