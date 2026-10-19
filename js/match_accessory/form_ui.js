@@ -234,7 +234,7 @@ export async function renderForm(containerId, state) {
             <input type="text" id="reverse-part-input" class="form-input" placeholder="製品品番を入力してください (例: ADM-102, SWC-N008)" value="${reversePartNumber}">
             <div class="reverse-search-note">
                 ※ 3文字以上で入力してください。製品カテゴリを跨いで横断検索します。<br>
-                <span class="note-warning-red">※ 一部の製品データは未登録のため、正しい品番であっても表示されない場合がございます。</span>
+                <span class="note-warning-red">※ 一部の製品データは未登録のため、正しい品番であっても表示されない場合がございます。リストにない製品は <a href="./match_pdf.html" target="_blank" rel="noopener noreferrer" style="color:#00479d; font-weight:bold; text-decoration:underline;">製品適合表 (PDF)</a> にて直接ご確認ください。</span>
             </div>
         `;
 
@@ -254,6 +254,9 @@ export async function renderForm(containerId, state) {
         productGroup.innerHTML = `
             <label for="product-select">製品名</label>
             <select id="product-select" class="form-select"></select>
+            <div class="form-field-missing-hint">
+                ※リストに存在しない製品については、お手数おかけしますが <a href="./match_pdf.html" target="_blank" rel="noopener noreferrer">製品適合表 (PDF)</a> にてPDFを直接ご確認ください。
+            </div>
         `;
         formContainer.appendChild(productGroup);
 

@@ -16,9 +16,124 @@
     box-sizing: border-box;
 }
 
+/* リストに存在しない製品への案内アラート（強調バナー） */
+.product-missing-alert {
+    width: 100%;
+    max-width: 960px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 22px;
+    background: linear-gradient(135deg, #fffcf0 0%, #fff6e0 100%);
+    border: 2px solid #f59e0b;
+    border-left: 6px solid #d97706;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(217, 119, 6, 0.15);
+    margin: 10px 0 5px 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-missing-alert:hover {
+    box-shadow: 0 6px 18px rgba(217, 119, 6, 0.22);
+}
+
+.product-missing-alert-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+.product-missing-alert-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.product-missing-alert-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.product-missing-alert-title {
+    margin: 0;
+    font-size: clamp(0.95rem, 0.3vw + 0.95rem, 1.15rem);
+    font-weight: 700;
+    color: #92400e;
+    letter-spacing: 0.02em;
+}
+
+.product-missing-alert-text {
+    margin: 0;
+    font-size: clamp(0.85rem, 0.2vw + 0.85rem, 1rem);
+    line-height: 1.7;
+    color: #1f2937;
+    font-weight: 500;
+}
+
+.product-missing-alert-link {
+    color: #00479d !important;
+    font-weight: 700;
+    text-decoration: underline !important;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1.5px;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.product-missing-alert-link:hover {
+    color: #002d6b !important;
+    text-decoration-color: #002d6b;
+}
+
+/* フォーム内製品選択下のヒント */
+.form-field-missing-hint {
+    margin-top: 8px;
+    padding: 10px 14px;
+    background-color: #fffbf0;
+    border: 1px solid #fed7aa;
+    border-left: 4px solid #f59e0b;
+    border-radius: 6px;
+    font-size: clamp(0.78rem, 0.2vw + 0.78rem, 0.88rem);
+    color: #78350f;
+    line-height: 1.5;
+}
+
+.form-field-missing-hint a {
+    color: #00479d;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.form-field-missing-hint a:hover {
+    color: #002d6b;
+}
+
+@media (max-width: 768px) {
+    .product-missing-alert {
+        align-items: flex-start;
+        gap: 12px;
+        padding: 14px 16px;
+    }
+    .product-missing-alert-icon {
+        width: 32px;
+        height: 32px;
+    }
+}
+
 .annotation {
-    padding: 20px;
-    margin: 20px 0;
+    width: 100%;
+    max-width: 960px;
+    box-sizing: border-box;
+    padding: 16px 20px;
+    margin: 5px 0 15px 0;
     background-color: #f7f7f7;
     border: 1px solid #ddd;
     border-left: 5px solid #0056b3;
