@@ -1,8 +1,32 @@
 [
   {
+    "date": "2026年10月21日",
+    "type": "適合情報",
+    "product": ["マジコネ バックカメラ接続ユニット"], "car_models": [
+      {"model_name":"ルーミー　＜一部改良＞　R8/9～　（M900A.M910A）","specification":"【バックカメラ付車】"},
+      {"model_name":"トール　＜一部改良＞　R8/9～　（M900S.M910S）","specification":"【純正ナビ装着用アップグレードパック】"}],
+    "brand": ["トヨタ","ダイハツ"],
+    "body": [
+      { "type":"html", "content": "<p><b>MAGICONE バックカメラ接続ユニット<span style=\"color: blue;\"><a href=\"/html/products/MAGICONE/BACK_CAMERA/av-c48/av-c48.htm\" target=\"_blank\">『AV-C48』</a></span></b></p>", "align": "right"}
+    ]
+  }
+  {
+    "date": "2026年10月21日",
+    "type": "適合情報",
+    "product": ["マジコネ バックカメラ接続ユニット"], "car_models": [
+      {"model_name":"ルーミー　＜一部改良＞　R8/9～　（M900A.M910A）","specification":"【パノラミックビュー対応ナビレディパッケージ付車】"},
+      {"model_name":"トール　＜一部改良＞　R8/9～　（M900S.M910S）","specification":"【純正ナビ装着用アップグレードパック＋パノラマモニターパック】"}],
+    "brand": ["トヨタ","ダイハツ"],
+    "body": [
+      { "type":"html", "content": "<p><b>MAGICONE バックカメラ接続ユニット<span style=\"color: blue;\"><a href=\"/html/products/MAGICONE/BACK_CAMERA/av-c50/av-c50.htm\" target=\"_blank\">『AV-C50』</a></span></b></p>", "align": "right"}
+    ]
+  }
+  {
     "date": "2026年10月16日",
     "type": "適合情報",
-    "product": ["FreeTVing"], "car_models": [{"model_name":"ルーミー　R8/9～　（M900A.M910A）","specification":"【9インチディスプレイオーディオ付車】"}],
+    "product": ["FreeTVing"], "car_models": [
+      {"model_name":"ルーミー　＜一部改良＞　R8/9～　（M900A.M910A）","specification":"【9インチディスプレイオーディオ付車】"},
+      {"model_name":"トール　＜一部改良＞　R8/9～　（M900S.M910S）","specification":"【9インチディスプレイオーディオ付車】"}],
     "brand": ["トヨタ"],
     "body": [
       { "type":"html", "content": "<p><b>FreeTVing<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-104』</a></span></b></p>", "align": "right"},
