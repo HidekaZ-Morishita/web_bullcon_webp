@@ -956,6 +956,12 @@ label {
     margin-top: 20px;
 }
 
+/* 逆引き検索結果表示時の枠の縦幅（高さを600pxから800pxに拡張） */
+#results-table-container.reverse-mode,
+#results-table-container:has(#reverse-results-wrapper) {
+    max-height: 800px;
+}
+
 .reverse-result-group {
     background: #fff;
     border: 1px solid #e0e0e0;

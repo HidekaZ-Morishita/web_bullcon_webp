@@ -292,6 +292,9 @@ export function createNotesCellHtml(item) {
 function generateTable(data, headerData, productName) {
     const selectedMaker = document.getElementById('maker-select')?.value;
     const tableContainer = document.getElementById('results-table-container');
+    if (tableContainer) {
+        tableContainer.classList.remove('reverse-mode');
+    }
 
     const reverseWrapper = document.getElementById('reverse-results-wrapper');
     if (reverseWrapper) {
@@ -483,6 +486,7 @@ export async function handleReverseSearchResults(partNumber) {
         const response = await getCompatibilityData(REVERSE_MATCH_API_URL, { part_number: partNumber });
 
         if (!response || !response.results || response.results.length === 0) {
+            if (tableContainer) tableContainer.classList.remove('reverse-mode');
             if (messageContainer) {
                 messageContainer.textContent = `「${partNumber}」に該当する製品・適合車種は見つかりませんでした。`;
                 messageContainer.style.display = 'block';
@@ -628,12 +632,14 @@ export async function handleReverseSearchResults(partNumber) {
         });
 
         if (tableContainer) {
+            tableContainer.classList.add('reverse-mode');
             tableContainer.appendChild(wrapper);
             tableContainer.style.display = 'block';
         }
 
     } catch (error) {
         console.error('逆引き検索エラー:', error);
+        if (tableContainer) tableContainer.classList.remove('reverse-mode');
         if (messageContainer) {
             messageContainer.textContent = '逆引き検索中にエラーが発生しました。';
             messageContainer.style.display = 'block';
