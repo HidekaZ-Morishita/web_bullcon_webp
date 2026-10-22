@@ -329,6 +329,10 @@ function resetResultArea() {
         reverseWrapper.remove();
     }
 
+    if (tableContainer) {
+        tableContainer.classList.remove('reverse-mode');
+    }
+
     const standardTable = document.querySelector('.result-table');
     if (standardTable) {
         standardTable.style.display = '';
