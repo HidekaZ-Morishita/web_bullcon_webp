@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026年10月23日",
+    "type": "適合情報",
+    "product": ["FreeTVing"], 
+    "car_models": [
+      {"model_name":"Super-ONE　R8/5～　（JG6）", "specification": "【Google搭載9インチHonda CONNECTディスプレー付車】"}],
+    "brand": ["ホンダ"],
+    "body": [
+      { "type":"html", "content": "<p><b>FreeTVing ｵｰﾄﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『FFT-240』</a></span></b></p>", "align": "right"},
+      { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『MS-240』</a></span></b></p>", "align": "right"},
+      { "type":"html", "content": "<p><b>TELENAVing ｵｰﾄﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-309』</a></span></b></p>", "align": "right"},
+      { "type":"html", "content": "<p><b>TELENAVing TV切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-309S』</a></span></b></p>", "align": "right"}
+    ]
+  },
+  {
     "date": "2026年10月21日",
     "type": "適合情報",
     "product": ["マジコネ バックカメラ接続ユニット"], "car_models": [
