@@ -1,5 +1,32 @@
 [
   {
+    "date": "2025年10月26日",
+    "type": "適合情報",
+    "product": ["FreeTVing / DVD/CDプレーヤー"],
+    "car_models": [{"model_name":"クラウン クロスオーバー　＜一部改良＞　R8/9～　（TZSH35.AZSH34）","specification":"【12.3インチ ディスプレイオーディオPlus装着車】<br> 【12.3インチ ディスプレイオーディオ装着車】"},
+    {"model_name":"クラウンスポーツ 【PHEV含む】　＜一部改良＞　R8/10～　（AZSD35W.AZSH37W）","specification":"【12.3インチ ディスプレイオーディオPlus装着車】<br> 【12.3インチ ディスプレイオーディオ装着車】"}],
+    "brand": ["トヨタ"],
+    "body": [
+      { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111AS』</a></span></b></p>", "align": "right"},
+      { "type":"html", "content": "<p><b>FreeTVing ｻｰﾋﾞｽﾎｰﾙｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111ASC』</a></span></b></p>", "align": "right"},
+      { "type":"html", "content": "<p><b>FreeTVing ｽﾃｱﾘﾝｸﾞｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-111AST』</a></span></b></p>", "align": "right"}
+    ]
+  },
+  {
+    "date": "2026年10月26日",
+    "type": "適合情報",
+    "product": ["FreeTVing / DVD/CDプレーヤー"],
+    "car_models": [ {"model_name":"ランドクルーザー 300　＜一部改良＞　R8/10～　(FJA300W）", "specification":"【12.3インチ ディスプレイオーディオPlus装着車】"},
+  {"model_name":"ランドクルーザー 300ハイブリッド　R8/10～　(FJA300W）", "specification":"【12.3インチ ディスプレイオーディオPlus装着車】"}],
+    "brand": ["トヨタ"],
+    "body": [
+      { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-110AS』</a></span></b></p>", "align": "right"},
+      { "type":"html", "content": "<p><b>FreeTVing ｻｰﾋﾞｽﾎｰﾙｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-110ASC』</a></span></b></p>", "align": "right"},
+      { "type":"html", "content": "<p><b>FreeTVing ｽﾃｱﾘﾝｸﾞｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-110AST』</a></span></b></p>", "align": "right"},
+      { "type":"html", "content": "<p><b>DVD/CDプレーヤー<span style=\"color: blue;\"><a href=\"/html/products/AV_ACCESSORY/cdv/cdv01.htm\" target=\"_blank\">『AV-CDV01』</a></span></b></p>", "align": "right"}
+    ]
+  },
+  {
     "date": "2026年10月23日",
     "type": "適合情報",
     "product": ["FreeTVing"], 
