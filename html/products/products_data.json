@@ -1729,6 +1729,11 @@
                                 "name": "EOP-USB-CA",
                                 "url": "/html/products/HDMI_USB/eopusbca/eopusbca.htm",
                                 "manual_url": "/pdf/products/HDMI_USB/EOP-USB-CA.pdf"
+                            },
+                            {
+                                "name": "SW-PTA01/SW-PTC01",
+                                "url": "/html/products/CAR_ACCESSORY/hole_sw/hole_sw.htm",
+                                "manual_url": ""
                             }
                         ]
                     }
@@ -2480,7 +2485,7 @@
                             },
                             {
                                 "name": "SW-PTA01/SW-PTC01",
-                                "url": "",
+                                "url": "/html/products/CAR_ACCESSORY/hole_sw/hole_sw.htm",
                                 "manual_url": ""
                             }
                         ]
