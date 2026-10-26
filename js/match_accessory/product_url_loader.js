@@ -57,19 +57,24 @@ export async function loadProductUrlMap() {
 
                     const subPages = product.sub_pages || [];
                     subPages.forEach(sub => {
-                        if (sub.name) {
-                            const cleanName = cleanString(sub.name);
-                            const subUrl = (sub.url && typeof sub.url === 'string') ? cleanString(sub.url) : '';
-                            const manualUrl = (sub.manual_url && typeof sub.manual_url === 'string') ? cleanString(sub.manual_url) : '';
-                            
-                            if (cleanName && (subUrl || mainPageUrl || manualUrl)) {
-                                const infoObj = {
-                                    url: subUrl,
-                                    mainPageUrl: mainPageUrl,
-                                    manualUrl: manualUrl
-                                };
+                        const cleanName = sub.name ? cleanString(sub.name) : '';
+                        const cleanPartNo = sub.part_number ? cleanString(sub.part_number) : '';
+                        const subUrl = (sub.url && typeof sub.url === 'string') ? cleanString(sub.url) : '';
+                        const manualUrl = (sub.manual_url && typeof sub.manual_url === 'string') ? cleanString(sub.manual_url) : '';
+                        
+                        if ((cleanName || cleanPartNo) && (subUrl || mainPageUrl || manualUrl)) {
+                            const infoObj = {
+                                url: subUrl,
+                                mainPageUrl: mainPageUrl,
+                                manualUrl: manualUrl
+                            };
+                            if (cleanName) {
                                 map.set(cleanName, infoObj);
                                 map.set(cleanName.toUpperCase(), infoObj);
+                            }
+                            if (cleanPartNo && cleanPartNo !== cleanName) {
+                                map.set(cleanPartNo, infoObj);
+                                map.set(cleanPartNo.toUpperCase(), infoObj);
                             }
                         }
                     });
