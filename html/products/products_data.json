@@ -1,4 +1,4 @@
-{
+﻿{
     "products_data": {
         "categories": [
             {
@@ -392,6 +392,12 @@
                                 "part_number": "FFT-240",
                                 "url": "",
                                 "manual_url": "/pdf/products/TVing/products_manual/FFT-240.pdf"
+                            },
+                            {
+                                "name": "FFT-241",
+                                "part_number": "FFT-241",
+                                "url": "",
+                                "manual_url": "/pdf/products/TVing/products_manual/FFT-241.pdf"
                             },
                             {
                                 "name": "CTN-101",
@@ -943,6 +949,12 @@
                                 "part_number": "MS-240",
                                 "url": "",
                                 "manual_url": "/pdf/products/TVing/products_manual/MS-240.pdf"
+                            },
+                            {
+                                "name": "MS-241",
+                                "part_number": "MS-241",
+                                "url": "",
+                                "manual_url": "/pdf/products/TVing/products_manual/MS-241.pdf"
                             },
                             {
                                 "name": "ST-229",

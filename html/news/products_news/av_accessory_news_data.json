@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026年10月28日",
+    "type": "新製品情報",
+    "product": ["FreeTVing"], 
+    "car_models": [
+      {"model_name":"eビターラ　R8/2～　（PA2AS.PB3AS）", "specification": "【メモリーナビゲーション10.1インチディスプレー付車】"}],
+    "brand": ["スズキ"],
+    "body": [
+      { "type":"html", "content": "<p><b>FreeTVing ｵｰﾄﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『FFT-241』</a></span></b></p>", "align": "right"},
+      { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『MS-241』</a></span></b></p>", "align": "right"}
+    ]
+  },
+  {
     "date": "2026年10月26日",
     "type": "適合情報",
     "product": ["FreeTVing / DVD/CDプレーヤー"],
