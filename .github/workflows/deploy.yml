@@ -3,12 +3,12 @@ name: Zenlogic Git-FTP Deploy (Full Automation)
 on:
   push:
     branches:
-      - test   # 🟢 testブランチにプッシュされたらテスト環境へデプロイ
-      - main   # 🔴 mainブランチにプッシュされたら本番環境へデプロイ
+      - test   # 🟢 testブランチにプッシュされたらテスト環境へデプロイ（常に即時）
+      - main   # 🔴 mainブランチにプッシュされたら本番環境へデプロイ（[reserve]指定で翌朝9:00予約可能）
 
 jobs:
   # ==========================================
-  # ① テスト環境へのデプロイ（testブランチ用）
+  # ① テスト環境へのデプロイ（testブランチ用：常に即時）
   # ==========================================
   deploy-staging:
     if: github.ref == 'refs/heads/test'
@@ -51,7 +51,7 @@ jobs:
                --data '{"purge_everything":true}'
 
   # ==========================================
-  # ② 本番環境へのデプロイ（mainブランチ用）
+  # ② 本番環境へのデプロイ（mainブランチ用：自由時間予約対応）
   # ==========================================
   deploy-production:
     if: github.ref == 'refs/heads/main'
@@ -63,6 +63,62 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Check commit message for custom reserve time
+        id: check_reserve
+        run: |
+          COMMIT_MSG=$(git log -1 --pretty=format:"%s")
+          echo "Commit message: $COMMIT_MSG"
+          
+          # [reserve: YYYY-MM-DD HH:MM] または [reserve: HH:MM] の形式を正規表現で抽出
+          if [[ "$COMMIT_MSG" =~ \[reserve:[[:space:]]*([0-9]{4}-[0-9]{2}-[0-9]{2}[[:space:]]+[0-9]{2}:[0-9]{2})\] ]]; then
+            TARGET_TIME="${BASH_REMATCH[1]}"
+            echo "IS_RESERVED=true" >> $GITHUB_OUTPUT
+            echo "TARGET_TIME=$TARGET_TIME" >> $GITHUB_OUTPUT
+            echo "カスタム日時予約検知: $TARGET_TIME まで待機します。"
+          elif [[ "$COMMIT_MSG" =~ \[reserve:[[:space:]]*([0-9]{2}:[0-9]{2})\] ]]; then
+            # 時間だけの指定（例: [reserve: 09:00]）の場合は今日（または翌日）のその時間とする
+            TIME_ONLY="${BASH_REMATCH[1]}"
+            TODAY=$(TZ='Asia/Tokyo' date +%Y-%m-%d)
+            TARGET_TIME="$TODAY $TIME_ONLY"
+            echo "IS_RESERVED=true" >> $GITHUB_OUTPUT
+            echo "TARGET_TIME=$TARGET_TIME" >> $GITHUB_OUTPUT
+            echo "本日時刻予約検知: $TARGET_TIME まで待機します。"
+          else
+            echo "IS_RESERVED=false" >> $GITHUB_OUTPUT
+            echo "本番通常モード: 即時デプロイを実行します。"
+          fi
+
+      - name: Wait until custom reserve time (if reserved)
+        if: steps.check_reserve.outputs.IS_RESERVED == 'true'
+        run: |
+          TARGET_STR="${{ steps.check_reserve.outputs.TARGET_TIME }}"
+          echo "予約目標時刻 (JST): $TARGET_STR"
+          
+          # 目標時刻をUnix秒に変換（タイムゾーンはJST指定）
+          TARGET_SEC=$(TZ='Asia/Tokyo' date -d "$TARGET_STR" +%s)
+          
+          while true; do
+            CURRENT_SEC=$(TZ='Asia/Tokyo' date +%s)
+            WAIT_SEC=$((TARGET_SEC - CURRENT_SEC))
+            
+            # すでに目標時刻を過ぎている場合は即時進む
+            if [ $WAIT_SEC -le 0 ]; then
+              echo "予約時刻に到達しました。デプロイを開始します。"
+              break
+            fi
+            
+            # 残り時間を計算して表示
+            REMAIN_MIN=$((WAIT_SEC / 60))
+            echo "予約時刻まであと約 ${REMAIN_MIN} 分です。待機中..."
+            
+            # 5分ごとにチェック（残り時間が5分未満なら1分ごとにチェック）
+            if [ $WAIT_SEC -lt 300 ]; then
+              sleep 60
+            else
+              sleep 300
+            fi
+          done
 
       - name: Get changed files
         id: changed-files
