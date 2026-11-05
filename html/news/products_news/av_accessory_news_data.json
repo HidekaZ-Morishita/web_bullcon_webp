@@ -29,7 +29,7 @@
     "type": "適合情報",
     "product": ["FreeTVing / DVD/CDプレーヤー"],
     "car_models": [ {"model_name":"ランドクルーザー 300　＜一部改良＞　R8/10～　(FJA300W）", "specification":"【12.3インチ ディスプレイオーディオPlus装着車】"},
-  {"model_name":"ランドクルーザー 300ハイブリッド　R8/10～　(FJA300W）", "specification":"【12.3インチ ディスプレイオーディオPlus装着車】"}],
+  {"model_name":"ランドクルーザー 300ハイブリッド　R8/10～　(VJH300W）", "specification":"【12.3インチ ディスプレイオーディオPlus装着車】"}],
     "brand": ["トヨタ"],
     "body": [
       { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-110AS』</a></span></b></p>", "align": "right"},
