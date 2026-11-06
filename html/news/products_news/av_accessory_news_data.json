@@ -1,5 +1,16 @@
 [
   {
+    "date": "2026年11月9日",
+    "type": "新製品情報",
+    "product": ["FreeTVing"], 
+    "car_models": [
+      {"model_name":"エルグランド　R8/8～　（NE53）", "specification": "【NissanConnectインフォテイメントシステム（14.3インチ・Google搭載）付車】"}],
+    "brand": ["ニッサン"],
+    "body": [
+      { "type":"html", "content": "<p><b>FreeTVing LEDｽｲｯﾁ切替ﾀｲﾌﾟ<span style=\"color: blue;\"><a href=\"/html/products/TVing/TVing.htm\" target=\"_blank\">『CTN-207S』</a></span></b></p>", "align": "right"}
+    ]
+  },
+  {
     "date": "2026年10月28日",
     "type": "新製品情報",
     "product": ["FreeTVing"], 
