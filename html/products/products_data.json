@@ -1,4 +1,4 @@
-﻿{
+{
     "products_data": {
         "categories": [
             {
@@ -715,6 +715,12 @@
                                 "part_number": "CTN-206S",
                                 "url": "",
                                 "manual_url": "/pdf/products/TVing/products_manual/CTN-206S.pdf"
+                            },
+                            {
+                                "name": "CTN-207S",
+                                "part_number": "CTN-207S",
+                                "url": "",
+                                "manual_url": "/pdf/products/TVing/products_manual/CTN-207S.pdf"
                             },
                             {
                                 "name": "MS-152N",
@@ -2914,16 +2920,16 @@
                         },
                         "sub_pages": [
                             {
-                                "name": "SW-PTC02",
-                                "part_number": "SW-PTC02",
-                                "url": "",
-                                "manual_url": ""
-                            },
-                            {
                                 "name": "SW-PTA01",
                                 "part_number": "SW-PTA01",
                                 "url": "",
                                 "manual_url": "/pdf/products/TVing/tvswsize.pdf"
+                            },
+                            {
+                                "name": "SW-PTC02",
+                                "part_number": "SW-PTC02",
+                                "url": "",
+                                "manual_url": ""
                             },
                             {
                                 "name": "SW-PTA01/SW-PTC01",
