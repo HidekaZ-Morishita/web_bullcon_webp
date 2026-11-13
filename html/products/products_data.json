@@ -2077,6 +2077,12 @@
                                 "part_number": "SW-PTC01",
                                 "url": "/html/products/CAR_ACCESSORY/hole_sw/hole_sw.htm",
                                 "manual_url": ""
+                            },
+                            {
+                                "name": "AV-RSC1",
+                                "part_number": "AV-RSC1",
+                                "url": "/html/products/MAGICONE/AV-RSC1.pdf",
+                                "manual_url": ""
                             }
                         ]
                     }
@@ -4126,6 +4132,23 @@
                                 "part_number": "FC-N01",
                                 "url": "/html/products/POWER/op_cn/fc-n01/fc-n01.htm",
                                 "manual_url": "/pdf/products/POWER/FC-N01.pdf"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "audio_wh",
+                        "name": "オーディオハーネス",
+                        "short_description": "電源/ACC/アース/スピーカーラインなどの接続に使用できます。",
+                        "image_path": "/images/products/audio_wh.webp",
+                        "main_page": {
+                            "url": "/html/products/POWER/awh/awh-t10.htm"
+                        },
+                        "sub_pages": [
+                            {
+                                "name": "awh-t10",
+                                "part_number": "awh-t10",
+                                "url": "",
+                                "manual_url": ""
                             }
                         ]
                     },
