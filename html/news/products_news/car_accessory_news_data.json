@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026年11月16日",
+    "type": "新製品情報",
+    "product": ["オーディオハーネス"], "car_models": [{"model_name":"ダイナ(1.0ton）　R5/8～"},
+  {"model_name":"ダイナ(2.0ton）　R8/4～"}],
+    "brand": ["トヨタ"],
+    "body": [{ "type":"html", "content": "<p><b>オーディオハーネス<span style=\"color: blue;\"><a href=\"/html/products/POWER/awh/awh-t10/awh-t10.htm\" target=\"_blank\">『AWH-T10』</a></span></b></p>", "align": "right"},
+  { "type":"html", "content": "<p><b>オーディオハーネス<span style=\"color: blue;\"><a href=\"/html/products/POWER/awh/awh-t10/awh-t10.htm\" target=\"_blank\">『AWH-T10RC』</a></span></b></p>", "align": "right"}]
+  },
+  {
     "date": "2026年10月13日",
     "type": "新製品情報",
     "product": ["オプションコネクターハーネス"], "car_models": [{"model_name":"RAV4　R8/1～　（AXAN64）"},
