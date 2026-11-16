@@ -4136,7 +4136,7 @@
                         ]
                     },
                     {
-                        "id": "audio_wh",
+                        "id": "audio_wire_harness",
                         "name": "オーディオハーネス",
                         "short_description": "電源/ACC/アース/スピーカーラインなどの接続に使用できます。",
                         "image_path": "/images/products/audio_wh.webp",
