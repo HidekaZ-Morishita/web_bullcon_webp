@@ -5,7 +5,7 @@
     "product": ["マジコネ オプション"], 
     "car_models":[
       {"plane_text":"AV-C63/C63EXT用リバース信号コンバーター"},
-      {"model_name":"ダイナカーゴ　2.0ton　R8/4～（GDY232.282）","specification":"【バックカメラ付インナーミラー装着車】"}],
+      {"model_name":"ダイナカーゴ　2.0ton　R8/4～","specification":"【バックカメラ付インナーミラー装着車】"}],
     "brand": ["トヨタ"],
     "body": [
       { "type":"html", "content": "<p><b>MAGICONE オプション<span style=\"color: blue;\"><a href=\"/html/products/MAGICONE/OPTION/av-rsc1/av-rsc1.htm\" target=\"_blank\">『AV-RSC1』</a></span></b></p>", "align": "right"}
