@@ -2049,6 +2049,12 @@
                                 "manual_url": "/pdf/products/MAGICONE/AV-SH01K.pdf"
                             },
                             {
+                                "name": "AV-RSC1",
+                                "part_number": "AV-RSC1",
+                                "url": "",
+                                "manual_url": "/pdf/products/MAGICONE/AV-RSC1.pdf"
+                            },
+                            {
                                 "name": "EOP-SP01TA",
                                 "part_number": "EOP-SP01TA",
                                 "url": "/html/products/HDMI_USB/eopspt/eopsp01ta.htm",
@@ -2076,12 +2082,6 @@
                                 "name": "SW-PTA01/SW-PTC01",
                                 "part_number": "SW-PTC01",
                                 "url": "/html/products/CAR_ACCESSORY/hole_sw/hole_sw.htm",
-                                "manual_url": ""
-                            },
-                            {
-                                "name": "AV-RSC1",
-                                "part_number": "AV-RSC1",
-                                "url": "/html/products/MAGICONE/AV-RSC1.pdf",
                                 "manual_url": ""
                             }
                         ]
@@ -4136,7 +4136,7 @@
                         ]
                     },
                     {
-                        "id": "audio_wire_harness",
+                        "id": "audio_harness",
                         "name": "オーディオハーネス",
                         "short_description": "電源/ACC/アース/スピーカーラインなどの接続に使用できます。",
                         "image_path": "/images/products/audio_wh.webp",
@@ -4145,10 +4145,22 @@
                         },
                         "sub_pages": [
                             {
-                                "name": "awh-t10",
-                                "part_number": "awh-t10",
+                                "name": "AWH-T10",
+                                "part_number": "AWH-T10",
                                 "url": "",
-                                "manual_url": ""
+                                "manual_url": "/pdf/products/POWER/AWH-T10.pdf"
+                            },
+                            {
+                                "name": "AWH-T10RC",
+                                "part_number": "AWH-T10RC",
+                                "url": "",
+                                "manual_url": "/pdf/products/POWER/AWH-T10RC.pdf"
+                            },
+                            {
+                                "name": "AV-RSC1",
+                                "part_number": "AV-RSC1",
+                                "url": "",
+                                "manual_url": "/pdf/products/MAGICONE/AV-RSC1.pdf"
                             }
                         ]
                     },
