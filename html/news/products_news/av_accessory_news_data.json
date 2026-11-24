@@ -1,5 +1,16 @@
 [
   {
+    "date": "2026年11月24日",
+    "type": "適合情報",
+    "product": ["MAGICONE バックカメラ接続ユニット"], "car_models": [{"model_name":"サクラ　R8/6～　（B6AW）","specification":"【ディスプレイ付自動防眩ルームミラー　+　インテリジョントアラウンドビューモニター装着車】"}],
+    "brand": ["ニッサン"],
+    "body": [
+      { "type": "html", "content": "インテリジェントアラウンドビューモニター映像を市販ナビゲーションに出力","align":"right"},
+      { "type":"html", "content": "<p><b>MAGICONE バックカメラ接続ユニット<span style=\"color: blue;\"><a href=\"/html/products/MAGICONE/BACK_CAMERA/av-c13/av-c13.htm\" target=\"_blank\">『AV-C13』</a></span></b></p>", "align": "right"},
+      { "type":"html", "content": "<p><b>MAGICONE バックカメラ接続ユニット<span style=\"color: blue;\"><a href=\"/html/products/MAGICONE/BACK_CAMERA/av-c13fa/av-c13fa.htm\" target=\"_blank\">『AV-C13FA』</a></span></b></p>", "align": "right"}
+    ]
+  },
+  {
     "date": "2026年11月16日",
     "type": "新製品情報",
     "product": ["マジコネ オプション"], 
