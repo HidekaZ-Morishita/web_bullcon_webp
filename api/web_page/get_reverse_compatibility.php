@@ -5,33 +5,11 @@ header('Access-Control-Allow-Methods: GET');
 
 require_once __DIR__ . '/cache_manager.php';
 
-// データベース接続設定の読み込み
-$configPath = null;
-$searchDir = __DIR__;
-for ($i = 0; $i < 5; $i++) {
-    if (file_exists($searchDir . '/secret/hp_config.php')) {
-        $configPath = $searchDir . '/secret/hp_config.php';
-        break;
-    }
-    $searchDir = dirname($searchDir);
-}
-if (!$configPath) {
-    $configPath = __DIR__ . '/../../../secret/hp_config.php';
-}
-$config = require $configPath;
-
-define('DB_HOST', $config['DB_HOST']);
-define('DB_NAME', $config['DB_NAME']);
-define('DB_USER', $config['DB_USER']);
-define('DB_PASS', $config['DB_PASS']);
-define('DB_PORT', $config['DB_PORT']);
-
-$dsn = 'pgsql:host=' . DB_HOST . ';port=' . DB_PORT . ';dbname=' . DB_NAME;
+// データベース共通接続ローダーを読み込み
+require_once __DIR__ . '/db.php';
 
 try {
-    $pdo = new PDO($dsn, DB_USER, DB_PASS);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    $pdo = getDbConnection();
 } catch (PDOException $e) {
     http_response_code(500);
     error_log('Database connection error: ' . $e->getMessage());
@@ -172,13 +150,14 @@ foreach ($tableTargets as $target) {
     $whereClauses = [];
     $params = [];
 
+    $likeOp = (getDbDriver() === 'pgsql') ? 'ILIKE' : 'LIKE';
     foreach ($columns as $col) {
-        $whereClauses[] = "{$col} ILIKE ?";
+        $whereClauses[] = "{$col} {$likeOp} ?";
         $params[] = $searchTerm;
 
         // ハイフンが含まれていない入力の場合、DB列のハイフンを除去した値でもマッチを試みる
         if ($cleanPartNumber !== $partNumber && strlen($cleanPartNumber) >= 3) {
-            $whereClauses[] = "REPLACE({$col}, '-', '') ILIKE ?";
+            $whereClauses[] = "REPLACE({$col}, '-', '') {$likeOp} ?";
             $params[] = $cleanSearchTerm;
         }
     }
