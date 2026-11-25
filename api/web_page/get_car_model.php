@@ -22,24 +22,8 @@ if ($cachedData !== false) {
     exit;
 }
 
-$configPath = null;
-$searchDir = __DIR__;
-for ($i = 0; $i < 5; $i++) {
-    if (file_exists($searchDir . '/secret/hp_config.php')) {
-        $configPath = $searchDir . '/secret/hp_config.php';
-        break;
-    }
-    $searchDir = dirname($searchDir);
-}
-if (!$configPath) {
-    $configPath = __DIR__ . '/../../../secret/hp_config.php';
-}
-$config = require $configPath;
-define('DB_HOST', $config['DB_HOST']);
-define('DB_NAME', $config['DB_NAME']);
-define('DB_USER', $config['DB_USER']);
-define('DB_PASS', $config['DB_PASS']);
-define('DB_PORT', $config['DB_PORT']);
+// データベース共通接続ローダーを読み込み
+require_once __DIR__ . '/db.php';
 
 $tableName  = 'car_model_list';
 
@@ -58,10 +42,7 @@ $desiredMakerOrder = [
 ];
 
 try {
-    $dsn = 'pgsql:host=' . DB_HOST . ';port=' . DB_PORT . ';dbname=' . DB_NAME;
-    $pdo = new PDO($dsn, DB_USER, DB_PASS);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    $pdo = getDbConnection();
 
     $sql = "SELECT * FROM $tableName";
 

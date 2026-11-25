@@ -22,62 +22,33 @@ if ($cachedData !== false) {
     exit;
 }
 
-$configPath = null;
-$searchDir = __DIR__;
-for ($i = 0; $i < 5; $i++) {
-    if (file_exists($searchDir . '/secret/hp_config.php')) {
-        $configPath = $searchDir . '/secret/hp_config.php';
-        break;
-    }
-    $searchDir = dirname($searchDir);
-}
-if (!$configPath) {
-    $configPath = __DIR__ . '/../../../secret/hp_config.php';
-}
-$config = require $configPath;
-define('DB_HOST', $config['DB_HOST']);
-define('DB_NAME', $config['DB_NAME']);
-define('DB_USER', $config['DB_USER']);
-define('DB_PASS', $config['DB_PASS']);
-define('DB_PORT', $config['DB_PORT']);
+// データベース共通接続ローダーを読み込み
+require_once __DIR__ . '/db.php';
 
-$tableNameList  = [
+$tableNameList = [
     'notes_tving',
     'notes_rearmonitor_vtr_hdmi',
     'notes_dvd_player',
     'notes_camera_selector',
     'notes_back_camera',
-    'notes_steering_switch_controller',
-    'notes_dvd_player'
+    'notes_steering_switch_controller'
 ];
 
-
 try {
-    $dsn = 'pgsql:host=' . DB_HOST . ';port=' . DB_PORT . ';dbname=' . DB_NAME;
-    $pdo = new PDO($dsn, DB_USER, DB_PASS);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    $pdo = getDbConnection();
 
-    $sql = getSql($tableNameList);
-
-
-    $stmt = $pdo->query($sql);
-    $result = $stmt->fetchAll();
-    // 1. 配列の最初の要素（インデックス 0）を取得
-    $first_result = $result[0];
-
-    // 2. 'json_build_object' キーの値（JSON文字列）を取得
-    //    ここで取得されるのは、PostgreSQLが出力した「生のJSON文字列」
-    $json_string_value = $first_result['json_build_object'];
-
-    // 3. JSON文字列をPHPの連想配列にデコード
-    //    これで、テーブル名（'notes_tving'など）をキーとするPHP配列が得られる
-    $organizedData = json_decode($json_string_value, true);
-
-    if (json_last_error() !== JSON_ERROR_NONE) {
-        die("エラー: JSONデコードに失敗しました - " . json_last_error_msg());
+    // MySQL 8.4 / PostgreSQL 両対応: 各注記テーブルから全件取得
+    $organizedData = [];
+    foreach ($tableNameList as $name) {
+        try {
+            $stmt = $pdo->query("SELECT * FROM {$name}");
+            $organizedData[$name] = $stmt ? $stmt->fetchAll() : [];
+        } catch (Exception $te) {
+            error_log("Note table query failed ({$name}): " . $te->getMessage());
+            $organizedData[$name] = [];
+        }
     }
-    
+
     $retData = formatNoteStructure($organizedData);
 
     // JSONオブジェクトを生成
@@ -94,41 +65,22 @@ try {
     echo json_encode(['error' => 'Database connection failed: ' . $e->getMessage()]);
 }
 
-function getSql(array $tableNameList): string {
-    $sql_parts = [];
-
-    foreach ($tableNameList as $name) {
-        $part = "
-            '{$name}', (
-                SELECT json_agg(t.*)
-                FROM (
-                    SELECT *
-                    FROM \"public\".\"{$name}\"
-                ) t
-            )
-        ";
-        $sql_parts[] = $part;
-    }
-
-    $sql = "SELECT json_build_object(\n" . implode(",\n", $sql_parts) . "\n);";
-    
-    return $sql;
-}
-
 function formatNoteStructure($noteMap) {
     $retList = [];
     foreach ($noteMap as $tableName => $tableData) {
         $formatted_data = [
             'common' => []
         ];
-        foreach ($tableData as $note) {
-            $note_num = $note['note_num'];
-            $content = $note['content'];
-            
-            if ($note_num === 0) {
-                $formatted_data['common'][] = $content;
-            } else {
-                $formatted_data[(string)$note_num] = $content;
+        if (is_array($tableData)) {
+            foreach ($tableData as $note) {
+                $note_num = isset($note['note_num']) ? (int)$note['note_num'] : null;
+                $content = $note['content'] ?? '';
+                
+                if ($note_num === 0) {
+                    $formatted_data['common'][] = $content;
+                } elseif ($note_num !== null) {
+                    $formatted_data[(string)$note_num] = $content;
+                }
             }
         }
         $retList[$tableName] = $formatted_data;
